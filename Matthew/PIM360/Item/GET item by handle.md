@@ -32,7 +32,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/-W4UaC
 An object containing the details of the requested item. Item attributes are held in an object called `attrs` where the keys in the object are the attribute handles, and the values are the attribute details and values. Note that if an item is added to an EIC but not published, if the EIC handle is not provided in the request then tag details will be returned but they will be missing attribute details.
 
 ## Example Response
-`
+```JSON
 {
   "hdl": "-W4UaC1IS5K5FCmfh5PbSQ",
   "type": "TAGGED_ITEM",
@@ -132,7 +132,7 @@ An object containing the details of the requested item. Item attributes are held
   ],
   "commentcount": 0
 }
-`
+```
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned

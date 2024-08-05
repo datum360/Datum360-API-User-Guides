@@ -5,6 +5,8 @@ Gets a summary of all EICs
 
 ## Required Capabilities
 * CanUseAPI
+* CanSeeEicExplorer
+* CanSeeAllPages
 
 ## Request Headers
 
@@ -24,7 +26,7 @@ curl --location 'https://dap-demo.pim360.io/api/eic/list' \
 A JSON object with a property `rows` containing an object for each EIC. Each EIC object contains basic information such as ID (number), status and id (hdl), as well as all of the attributes on that EIC. EIC attributes are stored as key-value pairs on the object, where the key is the attribute handle, and the value is the value of the attribute. To convert an attribute handle to a name, it must be passed to the `GET classes` CLS360 API. 
 
 ## Example Response
-`
+```JSON
 {
     "pos": 0,
     "rows": [
@@ -77,7 +79,7 @@ A JSON object with a property `rows` containing an object for each EIC. Each EIC
         }
     ]
 }
-`
+```
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned

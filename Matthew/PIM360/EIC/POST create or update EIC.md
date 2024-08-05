@@ -5,6 +5,8 @@ Allows EICs to be created or updated if a handle is provided.
 
 ## Required Capabilities
 * CanUseAPI
+* CanSeeEicExplorer
+* CanSeeAllPages
 
 ## Request Headers
 
@@ -60,18 +62,22 @@ To update:
 Returns the handle of the EIC that has been created or updated
 
 ## Example Response
-`
+```JSON
 {
     "Hdl": "gZbXNTq7Tiqf0Oze2VId1w"
 }
-`
+```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
+**200** Create/Update has been successfully executed
+
 **400** Bad request.
     "You must provide a CLASS attribute and value" When updating an EIC, you must provide the class of the EIC to update as well as any other attributes that are being changed
+
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
+
 **404** Requested item can't be found. Check that the handle has been provided and is correct.
+
 **500** Internal Server Error
 
 

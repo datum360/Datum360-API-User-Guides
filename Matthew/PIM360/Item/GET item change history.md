@@ -33,7 +33,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/-W4UaC
 An array containing objects with details of each individual change.This includes details of the activity that made the change, who made the change and what the attribute value was before the change.
 
 ## Example Response
-`
+```JSON
 [
     {
         "actHdl": "C9ahzDhQSF6-_K_SrRmZzw",
@@ -104,7 +104,7 @@ An array containing objects with details of each individual change.This includes
         ]
     }
 ]
-`
+```
 
 ## Response Status Codes
 **200** 

@@ -1,7 +1,7 @@
-# GET /objects/{{type}}/{{handle}}/id/{{ID}}
+# GET objects/{{type}}/facility/{{facility}}/id/{{ID}}
 
 ## Description
-Gets an object by type and its ID. Where ID is the attribute set in the context tab for the item type in CL4CL. For example a Tagged Item might have an ID attribute of "tag name".
+Since items are unqiquely identified by the combination of ID, Class and Facility, it is possible that an item with the same ID could exist in another facility. This API allows only the items in the provided facility to be returned.
 
 ## Required Capabilities
 * CanUseAPI
@@ -17,6 +17,8 @@ Gets an object by type and its ID. Where ID is the attribute set in the context 
 * EQUIPMENT_ITEM
 * EQUIPMENT_MODEL
 
+**facility** (required) (path) The name of the Facility to search in
+
 **ID** (required) (path) The ID of the item to get
 
 **eic** (optional) (query string) Handle of the EIC to search in, otherwise Active Data
@@ -24,7 +26,7 @@ Gets an object by type and its ID. Where ID is the attribute set in the context 
 
 ## Example Request
 `
-curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/id/BLW-001?eic=XYSp3hn0TDuJV-NX6MrTBQ' \
+curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/facility/TKF/id/BLW-001?eic=XYSp3hn0TDuJV-NX6MrTBQ' \
 --header 'Authorization: ••••••'
 `
 
@@ -32,6 +34,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/id/BLW
 An object containing the details of the requested item. Item attributes are held in an object called `attrs` where the keys in the object are the attribute handles, and the values are the attribute details and values. Note that if an item is added to an EIC but not published, if the EIC handle is not provided in the request then tag details will be returned but they will be missing attribute details.
 
 ## Example Response
+```JSON
 {
     "hdl": "-W4UaC1IS5K5FCmfh5PbSQ",
     "type": "TAGGED_ITEM",
@@ -78,24 +81,6 @@ An object containing the details of the requested item. Item attributes are held
             "conflict": [],
             "provenance": []
         },
-        "QlTaiX6jQZez38iQi8tcag": {
-            "hdl": "QlTaiX6jQZez38iQi8tcag",
-            "name": "plant code",
-            "icon": "facility",
-            "hasLookup": true,
-            "hasUOM": false,
-            "isNormal": true,
-            "value": "TKF",
-            "typedValue": "TKF",
-            "typeError": {},
-            "dataType": "STRING",
-            "uom": null,
-            "FTS": "TKF",
-            "change": true,
-            "typedChange": true,
-            "conflict": [],
-            "provenance": []
-        },
         .
         .
         .
@@ -113,11 +98,12 @@ An object containing the details of the requested item. Item attributes are held
     ],
     "commentcount": 0
 }
+```
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the ID has been provided and is correct.
+**404** Requested item can't be found. Check that the handle has been provided and is correct.
 **500** Internal Server Error
 
 

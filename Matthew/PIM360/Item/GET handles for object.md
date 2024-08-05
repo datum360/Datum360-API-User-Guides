@@ -40,9 +40,9 @@ curl --location 'https://{{SystemName}}.pim360.io/api/objects/TAGGED_ITEM/handle
 Returns an array of handles for items that match the provided query. If no matching items are found then an empty array will be returned with a successful statuss code
 
 ## Example Response
-`
+```JSON
 ["-W4UaC1IS5K5FCmfh5PbSQ"]
-`
+```
 
 ## Response Status Codes
 **200** Matching items have been successfully found and returned

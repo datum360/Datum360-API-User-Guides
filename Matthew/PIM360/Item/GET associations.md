@@ -44,6 +44,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/associations?type=TAGGED_I
 A Json object with a property `items` which is an array of all the associated objects. The object also has a get `getMore` property, if this is set to `1` then there are more associations to retrieve and the skip parameter should be used in the next request. Only 200 associations will be returned per request, so subsequent calls should skip by multiples of 200. If a tagged item has documents that a required against it then these associations will also appear here even if a document has not been provided.
 
 ## Example Response
+```JSON
 {
     "items": [
         {
@@ -84,6 +85,7 @@ A Json object with a property `items` which is an array of all the associated ob
     ],
     "getMore": 0
 }
+```
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned
