@@ -81,7 +81,7 @@ Creates a new pivot query and submits it to return the results
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/pivot/query' \
+curl --location 'https://{{systemName}}.pim360.io/api/pivot/query' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{"eicHdl":"UBzA9lXTQzmWtC2mketjdA","conditions":{"logical":"AND","items":[{"handle":"TssXvM-8Rb27GuDrXCBKjg","operator":"$regex-l","value":"Fremantle","caseSensitive":false,"excludeUoM":false,"regex":false,"uom":null}]},"fields":[{"handle":"TssXvM-8Rb27GuDrXCBKjg"}],"column":"HvJUq1IRSrKDwwzEotOQQg","summaries":[{"aggregator":"sum","handle":"_req"},{"aggregator":"cnt","handle":"_cnt"},{"aggregator":"sum","handle":"_group_qy86Z4MwSs6mZDjDtefNKw_typed_cmp"}],"objectType":"TAGGED_ITEM","sortCol":"TssXvM-8Rb27GuDrXCBKjg","sortDir":true,"isCount":true}'

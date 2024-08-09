@@ -15,7 +15,7 @@ Gets a custom view specified by the handle provided
 
 
 ## Example Request
-curl --location 'https://dap-demo.pim360.io/api/customviews/62utKNoWTlSkrFg14wYo6w' \
+curl --location 'https://{{systemName}}.pim360.io/api/customviews/62utKNoWTlSkrFg14wYo6w' \
 --header 'Authorization: ••••••' \
 
 ## Response Body

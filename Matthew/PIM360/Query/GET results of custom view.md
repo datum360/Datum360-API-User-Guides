@@ -32,7 +32,7 @@ defaults to whatever was specified in the original query defintion
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/queryresults/views/62utKNoWTlSkrFg14wYo6w?eic=UBzA9lXTQzmWtC2mketjdA&type=TAGGED_ITEM' \
+curl --location 'https://{{systemName}}.pim360.io/api/queryresults/views/62utKNoWTlSkrFg14wYo6w?eic=UBzA9lXTQzmWtC2mketjdA&type=TAGGED_ITEM' \
 --header 'Authorization: ••••••' \
 ```
 

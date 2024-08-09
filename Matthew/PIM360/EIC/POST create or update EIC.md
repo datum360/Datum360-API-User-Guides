@@ -20,7 +20,7 @@ To update: A JSON object with a `hdl` property, containing the handle of the eic
 ## Example Request
 To Create:
 `
-curl --location 'https://dap-demo.pim360.io/api/eic/list' \
+curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{

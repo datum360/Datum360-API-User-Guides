@@ -18,7 +18,7 @@ Gets a summary of all EICs
 
 ## Example Request
 `
-curl --location 'https://dap-demo.pim360.io/api/eic/list' \
+curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
 --header 'Authorization: ••••••'
 `
 
