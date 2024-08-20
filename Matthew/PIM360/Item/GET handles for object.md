@@ -18,6 +18,7 @@ Finds all objects of the specified type that have the attribute value that is pr
 * DOCUMENT
 * EQUIPMENT_ITEM
 * EQUIPMENT_MODEL
+* EIC
 
 **name** (required) (query string) The name of the attribute to query on. Should be URL encoded.
 
@@ -37,7 +38,7 @@ curl --location 'https://{{SystemName}}.pim360.io/api/objects/TAGGED_ITEM/handle
 `
 
 ## Response Body
-Returns an array of handles for items that match the provided query. If no matching items are found then an empty array will be returned with a successful statuss code
+Returns an array of handles for items that match the provided query. If no matching items are found then an empty array will be returned with a successful status code
 
 ## Example Response
 ```JSON
@@ -46,6 +47,8 @@ Returns an array of handles for items that match the provided query. If no match
 
 ## Response Status Codes
 **200** Matching items have been successfully found and returned
+
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
 
+**500** Internal server error. Make sure that all required parameters are provided
 

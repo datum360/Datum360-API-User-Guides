@@ -16,6 +16,7 @@ Since items are unqiquely identified by the combination of ID, Class and Facilit
 * DOCUMENT
 * EQUIPMENT_ITEM
 * EQUIPMENT_MODEL
+* EIC
 
 **facility** (required) (path) The name of the Facility to search in
 

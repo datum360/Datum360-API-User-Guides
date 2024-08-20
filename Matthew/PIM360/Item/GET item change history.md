@@ -17,6 +17,7 @@ Gets the change history for an object matching the provided type and handle. Thi
 * DOCUMENT
 * EQUIPMENT_ITEM
 * EQUIPMENT_MODEL
+* EIC 
 
 **handle** (required) (path) The handle of the item to get
 
@@ -107,7 +108,8 @@ An array containing objects with details of each individual change.This includes
 ```
 
 ## Response Status Codes
-**200** 
+**200** Change log for item has been successfully retrieved
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
+**404** Item can not be found. Check that the item handle is correct
 
 

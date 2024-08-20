@@ -16,6 +16,7 @@ Gets an object by type and its ID. Where ID is the attribute set in the context 
 * DOCUMENT
 * EQUIPMENT_ITEM
 * EQUIPMENT_MODEL
+* EIC
 
 **ID** (required) (path) The ID of the item to get
 
@@ -118,8 +119,11 @@ An object containing the details of the requested item. Item attributes are held
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned
+
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
+
 **404** Requested item can't be found. Check that the ID has been provided and is correct.
+
 **500** Internal Server Error
 
 
