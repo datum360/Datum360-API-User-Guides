@@ -144,8 +144,8 @@ Array of objects where each object is an activity, containing details of the ind
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+* **200** Matching item has been found and successfully returned
+* **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
+* **500** Internal Server Error
 
 

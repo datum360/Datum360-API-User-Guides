@@ -71,7 +71,9 @@ JSON object with a property `Deliverables` containaing an array of objects. Each
 
 ## Response Status Codes
 **200** Matching item has been found and successfully returned
+
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
+
 **500** Internal Server Error. Check that the provided EIC handle is valid
 
 

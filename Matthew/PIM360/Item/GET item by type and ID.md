@@ -3,6 +3,8 @@
 ## Description
 Gets an object by type and its ID. Where ID is the attribute set in the context tab for the item type in CL4CL. For example a Tagged Item might have an ID attribute of "tag name".
 
+**Note: ** There is currently a limitation with this API where it will only return the newest item that matches the `type` and `ID` combination, this is expected to be resolved in V2 of the API.
+
 ## Required Capabilities
 * CanUseAPI
 
