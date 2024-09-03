@@ -16,7 +16,7 @@ Update an existing template
 
 * **tmpHdl** (required) (path) The handle of the template to update.
 
-* **template** (required) (body) The JSON object representing the template to update. To make sure that all required data is provided, it is recommended to run the `GET /domains{domHdl}/templates/{clsHdl}` API first. Then update the response with the new details.
+* **template** (required) (body) The JSON object representing the template to update. To make sure that all required data is provided, it is recommended to run the `GET /domains/{domHdl}/templates/{clsHdl}` API first. Then update the response with the new details.
 
 ## Example Request
 ```
