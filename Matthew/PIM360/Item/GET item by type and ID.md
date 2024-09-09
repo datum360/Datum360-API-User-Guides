@@ -124,8 +124,6 @@ An object containing the details of the requested item. Item attributes are held
 
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
 
-**404** Requested item can't be found. Check that the ID has been provided and is correct.
+**404** Requested item can't be found. Check that the ID and object type have been provided and are correct.
 
 **500** Internal Server Error
-
-

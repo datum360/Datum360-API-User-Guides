@@ -88,12 +88,10 @@ A Json object with a property `items` which is an array of all the associated ob
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
+**200** Matching item has been found and successfully returned. If no associations are present then a `200` response will be returned but the items array will be empty.
 
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired.
 
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-
-**500** Internal Server Error
+**500** Internal Server Error. Check that item type and handle have been provided are correct.
 
 

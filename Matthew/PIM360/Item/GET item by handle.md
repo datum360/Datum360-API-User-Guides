@@ -140,8 +140,8 @@ An object containing the details of the requested item. Item attributes are held
 
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
 
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
+**404** Requested item can't be found. Check that the handle has been provided and is correct. Check that the provided item type is correct.
 
-**500** Internal Server Error
+**500** Internal Server Error. Make sure that the attribute name has been provided.
 
 

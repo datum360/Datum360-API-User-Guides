@@ -50,5 +50,7 @@ Returns an array of handles for items that match the provided query. If no match
 
 **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
 
+**404** Item not found. Check that the provided item type is correct.
+
 **500** Internal server error. Make sure that all required parameters are provided
 
