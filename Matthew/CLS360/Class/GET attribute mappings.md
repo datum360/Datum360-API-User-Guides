@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes/{classHdl}/AttributeMappings
 
 ## Description
-For a given ETL Data Source class, specified by classHdl, get all of the output mappings for that Data Source. This is useful for creating knowing which headers to use in a load file when loading data into PIM360 using the specified ETL Source.
+For a given ETL Data Source class, specified by classHdl, get all of the attribute mappings for that Data Source. This can be useful to know which headers to use in a load file when loading data into PIM360 using the specified ETL Source.
 
 ## Required Capabilities
 * CanUseAPI
@@ -15,7 +15,7 @@ For a given ETL Data Source class, specified by classHdl, get all of the output 
 
 * **classHdl** (required) (path) The handle of the class to get. This must be a class of type "Data Source", if any other handle is used then a 404 error will be returned.
 
-* **version** (query string) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query string) Which version of the Class Library to get the class from. The latest version will be used by default.
 
 
 ## Example Request
@@ -173,9 +173,11 @@ JSON object with an array property "rows" where each entry in the array is an ET
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct and that the handle being used is of an ETL Source
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct and that the class handle being used is of type ETL Source|
+|**500** |Internal Server Error|
 
 

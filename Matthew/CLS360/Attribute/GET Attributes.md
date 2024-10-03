@@ -1,4 +1,4 @@
-# GET /domains/{domHdl}/attribues
+# GET /domains/{domHdl}/attributes
 
 ## Description
 Gets all attributes or a single attribute by name, for the Class Library/Domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
@@ -11,7 +11,7 @@ Gets all attributes or a single attribute by name, for the Class Library/Domain 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Libray/Domain to use
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use
 
 * **attributeName** (query) The name of the attribute to get. Attribute names must be URL encoded.
 
@@ -45,9 +45,9 @@ A JSON object containing an array `rows` where each object in the array is an at
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
-
-
+| Status Code | Description |
+| -------- | ------- |
+| 200  | Matching item has been found and successfully returned    |
+| 401 | Unauthorised, authentication is missing or invalid. Check that the token has not expired     |
+| 404    | Requested item can't be found. Check that the handle has been provided and is correct    |
+| 5000    | Internal Server Error    |
