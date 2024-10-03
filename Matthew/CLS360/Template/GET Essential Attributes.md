@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/templates/type/{type}/EssentialAttributes
 
 ## Description
-Returns the minimum attributes that are required for creating an object of the specified type.
+Returns the essential attributes that are required for creating an object of the specified type.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,15 +12,15 @@ Returns the minimum attributes that are required for creating an object of the s
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Domain/Class Library to use
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
 
-* **type** (required) (path) The type of item to get essential attributes for, must be one of:
+* **type** (required) (path) The type of item, must be one of:
     * TAGGED_ITEM
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
     * DOCUMENT
 
-* **version** (query string) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
+* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided
 
 ## Example Request
 ```
@@ -52,9 +52,11 @@ JSON object with an array `value`. Each object in the array represents an attrib
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the item type is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the item type is correct.|
+|**500** |Internal Server Error.|
 
 
