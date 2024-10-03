@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/attributes
 
 ## Description
-Gets all attributes or a single attribute by name, for the Class Library/Domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
+Gets all attributes or a single attribute by name, for the class library/domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,11 +11,11 @@ Gets all attributes or a single attribute by name, for the Class Library/Domain 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use
+* **domHdl** (required) (path) The handle of the class library/domain to use
 
 * **attributeName** (query) The name of the attribute to get. Attribute names must be URL encoded.
 
-* **version** (query) The version of the Class Library to get data from
+* **version** (query) The version of the class library to use.
 
 
 ## Example Request

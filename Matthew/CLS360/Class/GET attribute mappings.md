@@ -11,11 +11,11 @@ For a given ETL Data Source class, specified by classHdl, get all of the attribu
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Domain/Class Library to get the class from
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use
 
 * **classHdl** (required) (path) The handle of the class to get. This must be a class of type "Data Source", if any other handle is used then a 404 error will be returned.
 
-* **version** (query) Which version of the Class Library to get the class from. The latest version will be used by default.
+* **version** (query) Which version of the class library to use. The latest version will be used by default.
 
 
 ## Example Request

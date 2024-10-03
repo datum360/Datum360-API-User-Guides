@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes/{classHdl}
 
 ## Description
-Retrieves the class specified by the class handle from the Domain/Class Library specified.
+Retrieves the class specified by the class handle from the Class Library/Domain specified.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,11 +11,11 @@ Retrieves the class specified by the class handle from the Domain/Class Library 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Domain/Class Library to get the class from
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
 
-* **classHdl** (required) (path) The handle of the class to get
+* **classHdl** (required) (path) The handle of the class to get.
 
-* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the class library to use. The latest version will be used by default.
 
 ## Example Request
 ```
