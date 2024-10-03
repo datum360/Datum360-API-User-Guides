@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/templates/{tmpHdl}
 
 ## Description
-Gets the CL4CL Template specified by the provided handle.
+Gets the CL4CL Template by handle.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,9 +12,8 @@ Gets the CL4CL Template specified by the provided handle.
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Class Library/Domain to get the template from
-
-* **tmpHdl** (required) (path) The handle of the template to get
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **tmpHdl** (required) (path) The handle of the template to request.
 
 ## Example Request
 ```
@@ -23,7 +22,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-JSON object containing the full details of the requested CL4CL Template
+JSON object containing the full details of the requested CL4CL Template.
 
 ## Example Response
 ```JSON
@@ -74,10 +73,7 @@ JSON object containing the full details of the requested CL4CL Template
                 {
                     "label": "SS",
                     "value": "SS"
-                },
-                .
-                .
-                .
+                }
             ]
         },
         {
@@ -129,10 +125,7 @@ JSON object containing the full details of the requested CL4CL Template
                     "Name": "Description",
                     "Icon": "general",
                     "Group": "Alias"
-                },
-                .
-                .
-                .
+                }
             ],
             "columns": [],
             "cache": "Alias",
@@ -253,9 +246,11 @@ JSON object containing the full details of the requested CL4CL Template
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error|
 
 

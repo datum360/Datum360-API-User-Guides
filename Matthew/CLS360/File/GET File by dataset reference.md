@@ -11,7 +11,7 @@ Download a file by selected by dataset reference
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **datasetReference** (required) (path) The dataset reference to use
+* **datasetReference** (required) (path) The dataset reference to use.
 
 
 ## Example Request

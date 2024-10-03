@@ -11,7 +11,7 @@ Download a file by handle
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **fileHdl** (required) (path) The handle of the file
+* **fileHdl** (required) (path) The handle of the file.
 
 ## Example Request
 ```

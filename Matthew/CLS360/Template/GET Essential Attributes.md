@@ -20,7 +20,7 @@ Returns the essential attributes that are required for creating an object of the
     * EQUIPMENT_MODEL
     * DOCUMENT
 
-* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided
+* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided.
 
 ## Example Request
 ```
@@ -29,7 +29,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-JSON object with an array `value`. Each object in the array represents an attribute, containing the attribute type from CL4CL and the handle of the attribute in the class library being used for that entry.
+JSON object with an array `value`. Each object in the array represents an attribute, containing the attribute type from CL4CL and the handle of the attribute value in the class library being used for that entry.
 
 ## Example Response
 ```JSON
