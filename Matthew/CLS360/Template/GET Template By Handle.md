@@ -14,6 +14,7 @@ Gets the CL4CL Template by handle.
 
 * **domHdl** (required) (path) The handle of the Class Library/Domain to use.
 * **tmpHdl** (required) (path) The handle of the template to request.
+* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided.
 
 ## Example Request
 ```
