@@ -14,7 +14,7 @@ Allows the creation of a new class in the specified Class Library/Domain
 ## Parameters
 * **domHdl** (required) (path) Handle of the Class Library/Domain to create the class in.
 
-* **class** (required) (body) JSON structure of the class to create
+* **class** (required) (body) JSON structure of the class to create.
 
 ## Example Request
 ```
@@ -114,9 +114,11 @@ String containing the handle of the newly created class
 ```
 
 ## Response Status Codes
-**201** Class has been successfully created
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error. Detailed error message should be provided in the response body.
+| Status Code | Description |
+| -------- | ------- |
+|**201** |Class has been successfully created|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error. Detailed error message should be provided in the response body.|
 
 
