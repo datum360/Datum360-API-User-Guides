@@ -15,7 +15,7 @@ Retrieves the class specified by the class handle from the Domain/Class Library 
 
 * **classHdl** (required) (path) The handle of the class to get
 
-* **version** (query string) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
 
 ## Example Request
 ```
@@ -214,9 +214,11 @@ JSON object containing the full class details
 
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

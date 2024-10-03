@@ -47,7 +47,7 @@ A JSON object containing an array `rows` where each object in the array is an at
 ## Response Status Codes
 | Status Code | Description |
 | -------- | ------- |
-| 200  | Matching item has been found and successfully returned    |
-| 401 | Unauthorised, authentication is missing or invalid. Check that the token has not expired     |
-| 404    | Requested item can't be found. Check that the handle has been provided and is correct    |
-| 5000    | Internal Server Error    |
+| 200  | Matching item has been found and successfully returned.    |
+| 401 | Unauthorised, authentication is missing or invalid. Check that the token has not expired.     |
+| 404    | Requested item can't be found. Check that the handle has been provided and is correct.    |
+| 5000    | Internal Server Error.    |
