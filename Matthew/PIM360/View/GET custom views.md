@@ -1,7 +1,7 @@
 # GET /customviews
 
 ## Description
-Gets all custom views in a system, optionally filtered by the `type` parameter.
+Get all custom views in a system, optionally filtered by the `type` parameter.
 
 ## Required Capabilities
 * CanUseAPI
@@ -27,7 +27,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/customviews?type=LIVE_VIEW
 `
 
 ## Response Body
-A JSON array of objects, where each object is an individual view
+A JSON array of objects, where each object is an individual view.
 
 ## Example Response
 ```JSON
@@ -76,8 +76,10 @@ A JSON array of objects, where each object is an individual view
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500**| Internal Server Error.|
 
 

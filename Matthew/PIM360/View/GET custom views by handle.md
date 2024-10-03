@@ -1,7 +1,7 @@
 # GET /customviews/{handle}
 
 ## Description
-Gets a custom view specified by the handle provided
+Get a custom view by handle
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Gets a custom view specified by the handle provided
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-**handle** (required) (path) The handle of the view to get
+**handle** (required) (path) The handle of the view requested.
 
 
 ## Example Request
@@ -19,7 +19,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/customviews/62utKNoWTlSkrF
 --header 'Authorization: ••••••' \
 
 ## Response Body
-JSON object detailing the requested view
+JSON object detailing the requested view.
 
 ## Example Response
 ```JSON
@@ -71,9 +71,11 @@ JSON object detailing the requested view
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 
