@@ -1,7 +1,7 @@
 # POST /pivot/export
 
 ## Description
-Submit a new activity to export a pivot query
+Submit a new activity to export a pivot query.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Submit a new activity to export a pivot query
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **query** (required) (body) JSON object describing the activity to run
+* **query** (required) (body) JSON object describing the activity to run.
 
 
 ## Example Request
@@ -46,7 +46,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/pivot/export' \
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted export activity
+A JSON object containing the details of the submitted export activity.
 
 ## Example Response
 ```JSON
@@ -71,9 +71,11 @@ A JSON object containing the details of the submitted export activity
 
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

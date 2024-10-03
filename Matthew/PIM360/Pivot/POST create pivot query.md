@@ -20,9 +20,10 @@ Creates a new pivot query and submits it to return the results
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
     * DOCUMENT
-* **eicHdl** Handle of the EIC to query, defaults to active data
+* **eicHdl** Handle of the EIC to query, defaults to active data.
 
-* **conditions** JSON object defining the filter to use when querying data. Filter Structure:
+* **conditions** JSON object defining the filter to use when querying data. 
+Filter Structure:
     * **logical**: What logical operator to apply when specifying multiple filter items. Must be one of:
         * AND
         * OR
@@ -57,27 +58,27 @@ Creates a new pivot query and submits it to return the results
             * **$regex-ne**: value does **not end with**
 
             * **$regex**: value **matches regex**
-        * **caseSensitive**: boolean value defining whether the search should be case sensitive or not
+        * **caseSensitive**: Boolean value defining whether the search should be case sensitive or not.
 
-        * **uom**: If a measure attribute is being queried, the value uom can be specified here. Can also be $any or $isempty    
+        * **uom**: If a measure attribute is being queried, the value uom can be specified here. Can also be ``$any`` or ``$isempty``.
 
-* **column** The atribute to use for column value
+* **column** The attribute to use for column value.
 
 * **summaries** JSON array of objects where each object is a summary attribute. Object structure is:
-    * **aggregator** type of the summary attribute. Can be one of: 
+    * **aggregator** Type of the summary attribute. Can be one of: 
         * sum
         * cnt
-    * **handle** handle of the summary attribute 
+    * **handle** Handle of the summary attribute.
 
-* **sortCol** The handle of the attribute to sort results on
+* **sortCol** The handle of the attribute to sort results on.
 
-* **sortDir** boolean value, the direction to sort results on, if `sortCol` is specified. `true` = ascending, `false` = descending
+* **sortDir** Boolean value, the direction to sort results on, if `sortCol` is specified. `true` = ascending, `false` = descending.
 
-* **posStart**  where to start in the query. Defaults to 0
+* **posStart** Where to start in the query. Defaults to 0.
 
-* **count** How many records to fetch
+* **count** How many records to fetch.
 
-* **isCount** Boolean value, whether to return the count of records or not
+* **isCount** Boolean value, whether to return the count of records or not.
 
 ## Example Request
 ```
@@ -88,7 +89,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/pivot/query' \
 ```
 
 ## Response Body
-JSON object containing the results of the pivot query
+JSON object containing the results of the pivot query.
 
 ## Example Response
 ```JSON
@@ -107,9 +108,11 @@ JSON object containing the results of the pivot query
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500**| Internal Server Error.|
 
 
