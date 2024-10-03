@@ -116,8 +116,8 @@ String containing the handle of the newly created class
 ## Response Status Codes
 | Status Code | Description |
 | -------- | ------- |
-|**201** |Class has been successfully created|
-|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired|
+|**201** |Class has been successfully created.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
 |**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
 |**500** |Internal Server Error. Detailed error message should be provided in the response body.|
 

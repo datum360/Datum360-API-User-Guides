@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/templates
 
 ## Description
-Returns a list of all templates
+Returns a list of all templates.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,9 +12,9 @@ Returns a list of all templates
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Domain/Class Library to use
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
 
-* **version** (query string) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
+* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided.
 
 ## Example Request
 ```
@@ -23,7 +23,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-JSON object with an array `rows`. Where each object in the array is a template from CL4CL
+JSON object with an array `rows`. Where each object in the array is a template from CL4CL.
 
 ## Example Response
 ```JSON
@@ -52,18 +52,17 @@ JSON object with an array `rows`. Where each object in the array is a template f
             "_cl": "MAKZvz1eTQSvaQdvlHsYNw",
             "_vn": 1,
             "_on": 0
-        },
-        .
-        .
-        .
+        }
     ],
     "header": []
 }
 ```
 
 ## Response Status Codes
-**200** Templates have been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Templates have been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 
