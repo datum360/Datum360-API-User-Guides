@@ -1,7 +1,7 @@
 # GET /etl_queue
 
 ## Description
-Gets the status of the activity queue and a list of all running and pending activities
+Gets the status of the activity queue and a list of all running and pending activities.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Gets the status of the activity queue and a list of all running and pending acti
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-
+No parameters
 
 
 ## Example Request
@@ -21,7 +21,7 @@ curl --location 'https://dap-demo.pim360.io/api/etl_queue' \
 ```
 
 ## Response Body
-JSON object containing Activity Queue status attributes `locked`, `pausing` and `state`. As well as `queue` which is an array of objects with one object per activity in the queue
+JSON object containing Activity Queue status attributes `locked`, `pausing` and `state`. As well as `queue` which is an array of objects with one object per activity in the queue.
 
 ## Example Response
 ```JSON
@@ -88,8 +88,10 @@ JSON object containing Activity Queue status attributes `locked`, `pausing` and 
 ```
 
 ## Response Status Codes
-**200** Sucessfully returned queue data
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Successfully returned queue data.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 
