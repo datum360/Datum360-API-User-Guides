@@ -1,7 +1,7 @@
 # GET /attributes/tree
 
 ## Description
-Get a list of available attributes
+Get a list of all available attributes as shown in Liveview attribute panel.
 
 ## Required Capabilities
 * CanUseAPI
@@ -13,7 +13,7 @@ Get a list of available attributes
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-
+No parameters
 
 
 ## Example Request
@@ -23,7 +23,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/attributes/tree' \
 ```
 
 ## Response Body
-Array of JSON objects, where each object is an attribute group with a property `attributes`, containg all objects within that group
+Array of JSON objects, where each object is an attribute group with a property `attributes`, containing all objects within that group.
 
 ## Example Response
 ```JSON
@@ -71,18 +71,17 @@ Array of JSON objects, where each object is an attribute group with a property `
                 "type": "date",
                 "ismeasure": false,
                 "hdl": "Modified.Ts"
-            },
-            .
-            .
-            .
+            }
         ]
     }
 ]
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500**| Internal Server Error.|
 
 
