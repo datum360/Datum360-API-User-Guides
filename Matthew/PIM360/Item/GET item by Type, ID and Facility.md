@@ -22,7 +22,7 @@ Since items are unqiquely identified by the combination of ID, Class and Facilit
 
 **ID** (required) (path) The ID of the item to get
 
-**eic** (optional) (query string) Handle of the EIC to search in, otherwise Active Data
+**eic** (optional) (query) Handle of the EIC to search in, otherwise active data
 
 
 ## Example Request

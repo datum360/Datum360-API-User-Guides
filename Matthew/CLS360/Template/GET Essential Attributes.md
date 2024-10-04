@@ -20,7 +20,7 @@ Returns the minimum attributes that are required for creating an object of the s
     * EQUIPMENT_MODEL
     * DOCUMENT
 
-* **version** (query string) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
+* **version** (query) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
 
 ## Example Request
 ```

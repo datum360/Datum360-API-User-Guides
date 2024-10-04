@@ -1,7 +1,7 @@
 # GET /associations
 
 ## Description
-Gets all associations of a certain item type on the provided item
+Returns associations for a certain item type on the provided item.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,27 +11,27 @@ Gets all associations of a certain item type on the provided item
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-**type** (required) (query string) The item type of the source item, must be one of:
-* TAGGED_ITEM
-* DOCUMENT
-* EQUIPMENT_ITEM
-* EQUIPMENT_MODEL
-* EIC
+* **type** (required) (query) The item type of the source item, must be one of:
+    * TAGGED_ITEM
+    * DOCUMENT
+    * EQUIPMENT_ITEM
+    * EQUIPMENT_MODEL
+    * EIC
 
-**hdl** (required) (query string) The handle of the item to find associations for
+* **hdl** (required) (query) The handle of the item to request associations for.
 
-**assoc** (required) (query string) The type of associated item to find, must be one of:
-* TAGGED_ITEM
-* DOCUMENT
-* EQUIPMENT_ITEM
-* EQUIPMENT_MODEL
-* EIC
-* PARENT
-* CHILDREN
+* **assoc** (required) (query) The type of associated item to find, must be one of:
+    * TAGGED_ITEM
+    * DOCUMENT
+    * EQUIPMENT_ITEM
+    * EQUIPMENT_MODEL
+    * EIC
+    * PARENT
+    * CHILDREN
 
-**eic** (optional) (query string) Handle of the EIC to search in, otherwise Active Data
+* **eic** (optional) (query) Handle of the EIC to use, otherwise active data.
 
-**skip** (optional) (query string) used for paging, the number of records to skip over
+* **skip** (optional) (query) Used for paging, the number of records to skip over.
 
 
 ## Example Request
@@ -41,7 +41,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/associations?type=TAGGED_I
 `
 
 ## Response Body
-A Json object with a property `items` which is an array of all the associated objects. The object also has a get `getMore` property, if this is set to `1` then there are more associations to retrieve and the skip parameter should be used in the next request. Only 200 associations will be returned per request, so subsequent calls should skip by multiples of 200. If a tagged item has documents that a required against it then these associations will also appear here even if a document has not been provided.
+A JSON object with a property `items` which is an array of associated objects. The object also has a get `getMore` property, if this is set to `1` then there are more associations to retrieve and the skip parameter should be used in the next request. Only 200 associations will be returned per request, so subsequent calls should skip by multiples of 200. If a tagged item has documents that a required against it then these associations will also appear here even if a document has not been provided.
 
 ## Example Response
 ```JSON
@@ -88,10 +88,11 @@ A Json object with a property `items` which is an array of all the associated ob
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned. If no associations are present then a `200` response will be returned but the items array will be empty.
-
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired.
-
-**500** Internal Server Error. Check that item type and handle have been provided are correct.
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned. If no associations are present |then a `200` response will be returned but the items array will be empty.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that handle has been provided is correct.|
+|**500** |Internal Server Error.|
 
 

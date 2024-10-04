@@ -14,7 +14,7 @@ Returns a list of all templates
 
 * **domHdl** (required) (path) The handle of the Domain/Class Library to use
 
-* **version** (query string) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
+* **version** (query) The version of the Class Library to use. Must be a number, defaults to the latest available version if not provided
 
 ## Example Request
 ```

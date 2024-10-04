@@ -13,9 +13,9 @@ Gets the full class library snapshot, used by PIM360 at a specified version
 ## Parameters
 * **domHdl** (required) (path) Handle of the class library/domain to get
 
-* **version** (required) (query string) The version of the class library to get the snapshot for. Must be greater than 0 and less than or equal to the current version. If a number greater than the current version is provided, then the current version will be returned. Not providing a version at all will return no class library data.
+* **version** (required) (query) The version of the class library to get the snapshot for. Must be greater than 0 and less than or equal to the current version. If a number greater than the current version is provided, then the current version will be returned. Not providing a version at all will return no class library data.
 
-* **fromVersion** (query string) optionally filter out snapshot data to only include information after a provided version
+* **fromVersion** (query) optionally filter out snapshot data to only include information after a provided version
 
 
 ## Example Request

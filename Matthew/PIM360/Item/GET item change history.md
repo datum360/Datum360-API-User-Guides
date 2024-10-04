@@ -21,7 +21,7 @@ Gets the change history for an object matching the provided type and handle. Thi
 
 **handle** (required) (path) The handle of the item to get
 
-**eic** (optional) (query string) Handle of the EIC to search in, otherwise Active Data
+**eic** (optional) (query) Handle of the EIC to search in, otherwise active data
 
 
 ## Example Request

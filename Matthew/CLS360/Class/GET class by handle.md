@@ -15,7 +15,7 @@ Retrieves the class specified by the class handle from the Domain/Class Library 
 
 * **classHdl** (required) (path) The handle of the class to get
 
-* **version** (query string) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
 
 ## Example Request
 ```

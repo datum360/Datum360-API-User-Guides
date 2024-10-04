@@ -15,7 +15,7 @@ Return a list of results for query by handle
 ## Parameters
 * **handle** (required) (path) The handle of the query to execute.
 
-* **eic** (query ) Handle of the EIC to use, defaults to whatever was specified in the original query definition.
+* **eic** (query) Handle of the EIC to use, defaults to whatever was specified in the original query definition.
 
 * **type** (query) The type of item to retrieve can be one of:
     * TAGGED_ITEM

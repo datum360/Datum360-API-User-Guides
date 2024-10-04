@@ -15,7 +15,7 @@ For a given ETL Data Target class, specified by classHdl, get all of the output 
 
 * **classHdl** (required) (path) The handle of the class to get. This must be a class of type "Data Target", if any other handle is used then a 404 error will be returned.
 
-* **version** (query string) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
 
 
 ## Example Request

@@ -17,7 +17,7 @@ Gets all Classes from the specified Class Library/Domain. An optional filter can
     Example:
     `Name cnt CABLE and [Object Type] eq Functional`
 
-The filter should also be URL encoded when added to the query string. The above example would look like:
+The filter should also be URL encoded when added to the query. The above example would look like:
     `Name%20cnt%20CABLE%20and%20%5BObject%20Type%5D%20eq%20Functional`
 Replacing spaces with %20 and square brackets with %5B [ and %5D ]
 

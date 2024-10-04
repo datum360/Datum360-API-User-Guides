@@ -22,7 +22,7 @@ Gets an object by type and its ID. Where ID is the attribute set in the context 
 
 **ID** (required) (path) The ID of the item to get
 
-**eic** (optional) (query string) Handle of the EIC to search in, otherwise Active Data
+**eic** (optional) (query) Handle of the EIC to search in, otherwise active data
 
 
 ## Example Request

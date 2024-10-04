@@ -11,7 +11,7 @@ Gets a list of all activities from the activity timeline
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **categories** (query string) The type of activities to get. Must be one of:
+* **categories** (query) The type of activities to get. Must be one of:
     * ALL
     * REPORT
     * EXPORT
@@ -19,15 +19,15 @@ Gets a list of all activities from the activity timeline
     * DELTA_REPORT
     * CLS_SNAPSHOT_IMPORT
 
-* **offset** (query string) The nubmer of records to skip over, used for paging and defaults to 0
+* **offset** (query) The nubmer of records to skip over, used for paging and defaults to 0
 
-* **limit** (query string) The number of records to return, default and maximum of 200
+* **limit** (query) The number of records to return, default and maximum of 200
 
-* **own** (query string) Whether to return only the authenticated users activities. `1` = `true`, defaults to `false`
+* **own** (query) Whether to return only the authenticated users activities. `1` = `true`, defaults to `false`
 
-* **eic** (query string) EIC handle to restrict activities to
+* **eic** (query) EIC handle to restrict activities to
 
-* **hdl** (query string) Handle of specific activity to get 
+* **hdl** (query) Handle of specific activity to get 
 
 ## Example Request
 ```

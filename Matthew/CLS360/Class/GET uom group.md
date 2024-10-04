@@ -15,7 +15,7 @@ Gets the details of the uom specified by the class handle.
 
 * **classHdl** (required) (path) The handle of the class to get. This must be a class of type "UoM Group", if any other handle is used then a 404 error will be returned.
 
-* **version** (query string) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
 
 
 ## Example Request

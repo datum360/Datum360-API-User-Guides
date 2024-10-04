@@ -11,9 +11,9 @@ Gets the issues on a specific task of an activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **taskhdl** (required) (query string) The handle of the task to get issues for
+* **taskhdl** (required) (query) The handle of the task to get issues for
 
-* **acthdl** (query string) optional filter to restrict to a specific activity
+* **acthdl** (query) optional filter to restrict to a specific activity
 
 
 ## Example Request
