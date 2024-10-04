@@ -1,7 +1,7 @@
 # GET /objects/{type}/{handle}
 
 ## Description
-Get an item of the specified type with the specified handle
+Get an item of the specified type with the specified handle.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,16 +12,16 @@ Get an item of the specified type with the specified handle
 
 ## Parameters
 
-**type** (required) (path) Item type to query on. Can be one of:  
-* TAGGED_ITEM
-* DOCUMENT
-* EQUIPMENT_ITEM
-* EQUIPMENT_MODEL
-* EIC
+* **type** (required) (path) Item type to query on. Can be one of:  
+  * TAGGED_ITEM
+  * DOCUMENT
+  * EQUIPMENT_ITEM
+  * EQUIPMENT_MODEL
+  * EIC
 
-**handle** (required) (path) The handle of the item to get
+* **handle** (required) (path) The handle of the item to get.
 
-**eic** (optional) (query) Handle of the EIC to search in, otherwise active data
+* **eic** (optional) (query) Handle of the EIC to use, otherwise active data.
 
 ## Example Request
 `
@@ -136,12 +136,11 @@ An object containing the details of the requested item. Item attributes are held
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-
-**404** Requested item can't be found. Check that the handle has been provided and is correct. Check that the provided item type is correct.
-
-**500** Internal Server Error. Make sure that the attribute name has been provided.
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct. Check that the provided item type is correct. Make sure that the attribute name has been provided.|
+|**500** |Internal Server Error. |
 
 

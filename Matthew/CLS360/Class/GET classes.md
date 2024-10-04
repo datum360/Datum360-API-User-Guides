@@ -11,7 +11,7 @@ Gets all Classes from the specified Class Library/Domain. An optional filter can
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
- * **domHdl** (required) (path) Handle of the Class Library/Domain to search in
+ * **domHdl** (required) (path) Handle of the Class Library/Domain to use
 
  * **filter** (query) Optional filter to search classes. Supports operators "eq" (equal) and "cnt" (contains), combine conditions with "and". Fields and values that contain spaces need wrapping with [square braces]
     Example:

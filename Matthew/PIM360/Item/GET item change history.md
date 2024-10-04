@@ -1,7 +1,7 @@
 # GET /objects/{types}/{handle}/changes
 
 ## Description
-Gets the change history for an object matching the provided type and handle. This is the equivelant of viewing the "Change Log" section of the UI for an item.
+Gets the change history for an object matching the provided type and handle. This is the equivalent of viewing the "Change Log" section of the UI for an item.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,16 +12,16 @@ Gets the change history for an object matching the provided type and handle. Thi
 
 ## Parameters
 
-**type** (required) (path) Item type to query on. Can be one of:  
-* TAGGED_ITEM
-* DOCUMENT
-* EQUIPMENT_ITEM
-* EQUIPMENT_MODEL
-* EIC 
+* **type** (required) (path) Item type to query on. Can be one of:  
+    * TAGGED_ITEM
+    * DOCUMENT
+    * EQUIPMENT_ITEM
+    * EQUIPMENT_MODEL
+    * EIC 
 
-**handle** (required) (path) The handle of the item to get
+* **handle** (required) (path) The handle of the item to get.
 
-**eic** (optional) (query) Handle of the EIC to search in, otherwise active data
+* **eic** (optional) (query) Handle of the EIC to use, otherwise active data.
 
 
 ## Example Request
@@ -31,7 +31,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/-W4UaC
 `
 
 ## Response Body
-An array containing objects with details of each individual change.This includes details of the activity that made the change, who made the change and what the attribute value was before the change.
+An array containing objects with details of each change. This includes details of the activity in which the change occurred, who made the change and what the attribute value was before the change.
 
 ## Example Response
 ```JSON
@@ -108,8 +108,11 @@ An array containing objects with details of each individual change.This includes
 ```
 
 ## Response Status Codes
-**200** Change log for item has been successfully retrieved
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Item can not be found. Check that the item handle is correct and the item type is correct.
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Change log for item has been successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Item cannot be found. Check that the item handle and the item type are correct.|
+|**500** |Internal Server Error.|
 
 
