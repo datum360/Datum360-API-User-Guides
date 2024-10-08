@@ -1,7 +1,7 @@
 # GET /queryresults/{handle}
 
 ## Description
-Return a list of results for query by handle
+Returns a list of results for query by handle
 
 ## Required Capabilities
 * CanUseAPI

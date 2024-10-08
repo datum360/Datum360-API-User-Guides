@@ -1,7 +1,7 @@
 # GET /queryresults/views/{handle}
 
 ## Description
-Return a list of results for query by custom view handle.
+Returns a list of results for query by custom view handle.
 
 ## Required Capabilities
 * CanUseAPI
