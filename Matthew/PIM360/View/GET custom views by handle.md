@@ -1,7 +1,7 @@
 # GET /customviews/{handle}
 
 ## Description
-Get a custom view by handle
+Gets a custom view by handle
 
 ## Required Capabilities
 * CanUseAPI

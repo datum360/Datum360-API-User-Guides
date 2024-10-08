@@ -1,7 +1,7 @@
 # POST /facility-explorer/tree
 
 ## Description
-Submit a Facility Explorer query and return the definition.
+Submits a Facility Explorer query and return the definition.
 
 ## Required Capabilities
 * CanUseAPI

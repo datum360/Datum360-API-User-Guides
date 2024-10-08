@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/export
 
 ## Description
-Submit a new export activity.
+Submits a new export activity.
 
 ## Required Capabilities
 * CanUseAPI

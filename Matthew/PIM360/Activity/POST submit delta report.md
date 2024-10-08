@@ -1,7 +1,7 @@
 # POST /rundeltareport
 
 ## Description
-Submit a new delta report activity.
+Submits a new delta report activity.
 
 ## Required Capabilities
 * CanUseAPI

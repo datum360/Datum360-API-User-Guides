@@ -1,7 +1,7 @@
 # POST /pivot/export
 
 ## Description
-Submit a new activity to export a pivot query.
+Submits a new activity to export a pivot query.
 
 ## Required Capabilities
 * CanUseAPI

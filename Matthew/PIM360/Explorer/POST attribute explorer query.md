@@ -1,7 +1,7 @@
 # POST /explorer/query
 
 ## Description
-Submit an attribute explorer query.
+Submits an attribute explorer query.
 
 ## Required Capabilities
 * CanUseAPI

@@ -1,7 +1,7 @@
 # GET /objects/{type}/{handle}
 
 ## Description
-Get an item of the specified type with the specified handle.
+Gets an item of the specified type with the specified handle.
 
 ## Required Capabilities
 * CanUseAPI

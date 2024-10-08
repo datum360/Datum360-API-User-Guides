@@ -1,7 +1,7 @@
 # GET /attributes/tree
 
 ## Description
-Get a list of all available attributes as shown in Liveview attribute panel.
+Gets a list of all available attributes as shown in Liveview attribute panel.
 
 ## Required Capabilities
 * CanUseAPI

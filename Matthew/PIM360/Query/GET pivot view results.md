@@ -1,7 +1,7 @@
 # GET /queryresults/pivot/{handle}
 
 ## Description
-Return a list of results for the pivot view specified.
+Returns a list of results for the pivot view specified.
 
 ## Required Capabilities
 * CanUseAPI

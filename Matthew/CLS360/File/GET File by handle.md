@@ -1,7 +1,7 @@
 # GET /files/{fileHdl}
 
 ## Description
-Get a file that has been uploaded to CLS360 using its handle
+Gets a file that has been uploaded to CLS360 using its handle
 
 ## Required Capabilities
 * CanUseAPI

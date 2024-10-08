@@ -1,7 +1,7 @@
 # POST /dashboard/query/history
 
 ## Description
-Submit a query for a historical trend dashboard widget.
+Submits a query for a historical trend dashboard widget.
 
 ## Required Capabilities
 * CanUseAPI

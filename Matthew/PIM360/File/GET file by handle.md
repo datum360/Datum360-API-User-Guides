@@ -1,7 +1,7 @@
 # GET /file/{handle}
 
 ## Description
-Get the contents of a file by handle provided.
+Gets the contents of a file by handle provided.
 
 ## Required Capabilities
 * CanUseAPI

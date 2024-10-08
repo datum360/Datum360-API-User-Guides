@@ -1,7 +1,7 @@
 # GET /customviews
 
 ## Description
-Get all custom views in a system, optionally filtered by the `type` parameter.
+Gets all custom views in a system, optionally filtered by the `type` parameter.
 
 ## Required Capabilities
 * CanUseAPI

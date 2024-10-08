@@ -1,7 +1,7 @@
 # POST /facility-explorer/leaf
 
 ## Description
-Get child tags for a given facility explorer parent item.
+Gets child tags for a given facility explorer parent item.
 
 ## Required Capabilities
 * CanUseAPI

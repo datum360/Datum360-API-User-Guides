@@ -1,7 +1,7 @@
 # POST /facility-explorer/root
 
 ## Description
-Get parent items for the provided condition.
+Gets parent items for the provided condition.
 
 ## Required Capabilities
 * CanUseAPI

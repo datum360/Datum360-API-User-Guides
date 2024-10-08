@@ -1,7 +1,7 @@
 # PATCH /deliverables/{delHdl}/files/{fileHdl}/forgeupload
 
 ## Description
-Submit a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer
+Submits a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer
 
 ## Required Capabilities
 * CanUseAPI

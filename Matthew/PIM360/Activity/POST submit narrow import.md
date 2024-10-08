@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/narrow_import
 
 ## Description
-Submit a narrow import activity.
+Submits a narrow import activity.
 
 ## Required Capabilities
 * CanUseAPI
