@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes
 
 ## Description
-Gets all Classes from the specified Class Library/Domain. An optional filter can be provided to specify which Classes to return
+Gets all Classes from the specified class library/domain. An optional filter can be provided to specify which Classes to return
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Gets all Classes from the specified Class Library/Domain. An optional filter can
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
- * **domHdl** (required) (path) Handle of the Class Library/Domain to use
+ * **domHdl** (required) (path) Handle of the class library/domain to use
 
  * **filter** (query) Optional filter to search classes. Supports operators "eq" (equal) and "cnt" (contains), combine conditions with "and". Fields and values that contain spaces need wrapping with [square braces]
     Example:
@@ -25,7 +25,7 @@ Replacing spaces with %20 and square brackets with %5B [ and %5D ]
 
 * **page** (query) Skip entries in multiples of `pageSize`. e.g if `pageSize` is 200 and `page` is 2, then 400 records will be skipped and records 400 - 600 will be returned. If `pageSize` has not been provided then a default value of 200 will be assumed
 
-* **version** (query) Which version of the Class Library/Domain to use when returning data. If no value is provided, then the current version will be used.
+* **version** (query) Which version of the class library/domain to use when returning data. If no value is provided, then the current version will be used.
 
 ## Example Request
 ```

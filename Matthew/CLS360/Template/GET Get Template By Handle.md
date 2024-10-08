@@ -12,7 +12,7 @@ Gets the CL4CL Template specified by the provided handle.
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Class Library/Domain to get the template from
+* **domHdl** (required) (path) The handle of the class library/domain to get the template from
 
 * **tmpHdl** (required) (path) The handle of the template to get
 

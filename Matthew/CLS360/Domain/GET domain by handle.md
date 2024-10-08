@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}
 
 ## Description
-Gets the Class Library/Domain with the handle specified
+Gets the class library/domain with the handle specified
 
 ## Required Capabilities
 * CanUseAPI

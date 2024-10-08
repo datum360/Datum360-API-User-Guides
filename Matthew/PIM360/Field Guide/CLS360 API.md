@@ -1,7 +1,7 @@
 # CLS360 Field Guide
 
 ## Getting Data From CLS360
-The main point to consider when retrieving data from CLS360 is that almost everything is a class. Anything that is available in the object browser can be accessed using one of the `classes` APIs. The object types available in CLS360 are:
+The main point to consider when retrieving data from CLS360 is that almost everything is a class. Anything that is available in the object browser can be accessed using one of the `class` APIs. The object types available in CLS360 are:
 * Activities
 * Classes
 * Domains
@@ -11,7 +11,7 @@ The main point to consider when retrieving data from CLS360 is that almost every
 
 ## CLS360 Snapshot Structure
 
-The CLS360 snasphot is a JSON representation of the entire CLS360 Class Library and is used for configuring the structure of data loaded into PIM360. If a large number of API calls need to be made against CLS360 to retrieve data, then it can be better to call the API `GET /domains/{domHdl}/snapshot` to retrieve the entire Class Library. Depending on the size of the Class Library this can take a few seconds and the response will be multiple megabytes in size, but it results in a single API call rather than 10s to 100s. The below describes each section of the CLS360 snapshot
+The CLS360 snapshot is a JSON representation of the entire CLS360 class library and is used for configuring the structure of data loaded into PIM360. If a large number of API calls need to be made against CLS360 to retrieve data, then it can be better to call the API `GET /domains/{domHdl}/snapshot` to retrieve the entire class library. The below describes each section of the CLS360 snapshot
 
 ### domain
 
@@ -28,7 +28,7 @@ The CLS360 snasphot is a JSON representation of the entire CLS360 Class Library 
     }
 ```
 
-This section contains a summary of the Class Library/Domain including its hahndle, name and the current version.
+This section contains a summary of the class library/domain including its handle, name and the current version.
 
 ### schema
 
@@ -41,7 +41,7 @@ This section contains a summary of the Class Library/Domain including its hahndl
     },
 ```
 
-Schema shows the schema version of a Class Library. This can be useful if you want to be able to compare 2 different Class Libraries, it would be best to make sure that they are on the same schema version so that the structure is the same.
+Schema shows the version of a class library. This can be useful if you want to be able to compare 2 different class libraries, it is best to ensure they are on the same version so the structure is the same.
 
 ### CL4CL
 
@@ -197,4 +197,4 @@ CL4CL contains an object array where each object is a different item from CL4CL.
  ]
 ```
 
-Classes is the final section in the snapshot and it contains an array of every object available in the "Object Browser" view of CLS360. The detail in each one of these objects is the same as calling `GET /domains/{domhdl}/classes/{classHdl}` for each individual class
+Classes is the final section of the snapshot and it contains an array of every object available in the "Object Browser" view of CLS360. The detail in each one of these objects is the same as calling `GET /domains/{domhdl}/classes/{classHdl}` for each individual class.

@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/attribues
 
 ## Description
-Gets all attributes or a single attribute by name, for the Class Library/Domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
+Gets all attributes or a single attribute by name, for the class library/domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
 
 ## Required Capabilities
 * CanUseAPI
