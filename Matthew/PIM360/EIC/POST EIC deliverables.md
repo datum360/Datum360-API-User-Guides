@@ -19,7 +19,7 @@ Creates a new deliverable on the provided EIC. Multiple deliverables can be crea
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/XYSp3hn0TDuJV-NX6MrTBQ/deliverables' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -30,7 +30,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/XYSp3hn0TDuJV-NX6MrTBQ
         "DueDate": "2024-08-04"
     }
 ]'
-`
+```
 
 ## Response Body
 A JSON object containing `Status` and `Deliverables` properties. `Status` shows if the deliverables were created successfully. `Deliverables` is an array of objects, each object holding details of the newly created deliverables.

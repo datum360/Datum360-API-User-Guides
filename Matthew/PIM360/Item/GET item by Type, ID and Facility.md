@@ -26,10 +26,10 @@ As items are uniquely identified by the combination of ID, class and facility, i
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/facility/TKF/id/BLW-001?eic=XYSp3hn0TDuJV-NX6MrTBQ' \
 --header 'Authorization: ••••••'
-`
+```
 
 ## Response Body
 An object containing the details of the requested item. Item attributes are held in an object called `attrs` where the keys in the object are the attribute handles, and the values are the attribute details and values. Note that if an item is added to an EIC but not published, if the EIC handle is not provided in the request then tag details will be returned but they will be missing attribute details.

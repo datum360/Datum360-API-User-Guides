@@ -20,7 +20,7 @@ Takes a list of tag numbers separated by \n, parses them according to the provid
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/allocator/parse' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -30,7 +30,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/allocator/parse' \
     "ensName": "Standard ENS",
     "taglist": "TKF-01-TW-0001\nMCC-01-TL-0001"
 }'
-`
+```
 
 ## Response Body
 JSON object containing a summary of the parse results, details of each item are held as objects in the array `parsedItems`.

@@ -31,10 +31,10 @@ Finds all objects of the specified type that have the attribute value that is pr
 * **limit** (query) Used for paging, the number of records to return. Default and maximum of 200.
 
 ## Example Request
-`
+```
 curl --location 'https://{{SystemName}}.pim360.io/api/objects/TAGGED_ITEM/handles?name=facility&value=CASTOR&eic=XYSp3hn0TDuJV-NX6MrTBQ' \
 --header 'Authorization: ******'
-`
+```
 
 ## Response Body
 Returns an array of handles for items that match the provided query. If no matching items are found then an empty array will be returned with a successful status code.

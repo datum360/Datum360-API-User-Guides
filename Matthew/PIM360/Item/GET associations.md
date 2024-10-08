@@ -35,10 +35,10 @@ Returns associations for a certain item type on the provided item.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/associations?type=TAGGED_ITEM&hdl=-W4UaC1IS5K5FCmfh5PbSQ&assoc=DOCUMENT&eic=XYSp3hn0TDuJV-NX6MrTBQ' \
 --header 'Authorization: ••••••'
-`
+```
 
 ## Response Body
 A JSON object with a property `items` which is an array of associated objects. The object also has a get `getMore` property, if this is set to `1` then there are more associations to retrieve and the skip parameter should be used in the next request. Only 200 associations will be returned per request, so subsequent calls should skip by multiples of 200. If a tagged item has documents that a required against it then these associations will also appear here even if a document has not been provided.

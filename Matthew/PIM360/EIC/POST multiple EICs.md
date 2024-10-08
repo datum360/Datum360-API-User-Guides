@@ -16,7 +16,7 @@ Allows multiple EICs to be submitted for publish in one activity.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/publish/multiple' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -26,7 +26,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/publish/multiple' \
         "tJsy-BtWQbe2SoaTeNVAcQ"
     ]
 }'
-`
+```
 
 ## Response Body
 A JSON object containing details of the publish activity that has been submitted. This shows that the activity has been successfully submitted to process but does not guarantee that the publish itself will be successful. To monitor the status of an activity, use the API `GET /etl_queue/activities/{handle}`.

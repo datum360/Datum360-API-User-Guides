@@ -18,10 +18,10 @@ Gets a list of all deliverables that are associated with the provided EIC.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/XYSp3hn0TDuJV-NX6MrTBQ/deliverables' \
 --header 'Authorization: ••••••'
-`
+```
 
 ## Response Body
 JSON object with a property `Deliverables` containing an array of objects. Each object in the array is a deliverable. Each deliverable lists all of the files that have been loaded against it.

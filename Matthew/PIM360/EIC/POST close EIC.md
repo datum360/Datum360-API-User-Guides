@@ -17,14 +17,14 @@ Submits a close EIC activity for the provided EIC.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/close' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{
     "eicHdl": "mbcYa6ZYSqO2X9toKkl_kw"
 }'
-`
+```
 
 ## Response Body
 A JSON object containing details of the close EIC activity that has been submitted. This does not guarantee that the activity has been successful, to monitor the status of an activity, use the API `GET /etl_queue/activities/{handle}`.

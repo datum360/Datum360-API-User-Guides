@@ -20,7 +20,7 @@ Returns a set of unique values of EIC attributes (defined by `uniqueAttributeHdl
 ## Example Request
 The below request will get all unique values for the attribute with handle `vQPCnBpNRwSAjFbTbu_vxw` and then filter on those EICs where the attribute with handle `crBhwt7JTAGGZNHDeUucVg` and value of "Submitted".
 
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/attributes/unique' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -33,7 +33,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/attributes/unique' \
     ],
     "uniqueAttributeHdl": "vQPCnBpNRwSAjFbTbu_vxw"
 }'
-`
+```
 
 ## Response Body
 A JSON object with an attribute `rows`. `rows` is an array of objects where each object is a key value pair of attribute handle and attribute values that match the provided query.

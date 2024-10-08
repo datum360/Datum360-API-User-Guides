@@ -19,7 +19,7 @@ Takes a regular expression that matches a tag number format, a facility and an o
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/allocator/lastnumerics' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -28,7 +28,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/allocator/lastnumerics' \
     "facid": "TKF",
     "type": "TAGGED_ITEM"
 }'
-`
+```
 
 ## Response Body
 JSON object containing the property `tag` which contains the matching item number. If no matching item is found then.

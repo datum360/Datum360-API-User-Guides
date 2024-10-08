@@ -19,7 +19,7 @@ To update: A JSON object with a `hdl` property, containing the handle of the eic
 
 ## Example Request
 To create:
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -39,10 +39,10 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
     }
   ]
 }'
-`
+```
 
 To update:
-`
+```
 {
   "hdl": "gZbXNTq7Tiqf0Oze2VId1w",
   "attrs": [
@@ -56,7 +56,7 @@ To update:
     }
   ]
 }
-`
+```
 
 ## Response Body
 Returns the handle of the EIC that has been created or updated.

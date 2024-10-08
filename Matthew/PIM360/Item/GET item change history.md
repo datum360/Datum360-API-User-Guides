@@ -25,10 +25,10 @@ Gets the change history for an object matching the provided type and handle. Thi
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/objects/TAGGED_ITEM/-W4UaC1IS5K5FCmfh5PbSQ/changes?eic=XYSp3hn0TDuJV-NX6MrTBQ' \
 --header 'Authorization: ••••••'
-`
+```
 
 ## Response Body
 An array containing objects with details of each change. This includes details of the activity in which the change occurred, who made the change and what the attribute value was before the change.

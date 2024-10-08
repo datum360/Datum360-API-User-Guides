@@ -15,8 +15,10 @@ Get a custom view by handle
 
 
 ## Example Request
+```
 curl --location 'https://{{systemName}}.pim360.io/api/customviews/62utKNoWTlSkrFg14wYo6w' \
 --header 'Authorization: ••••••' \
+```
 
 ## Response Body
 JSON object detailing the requested view.

@@ -21,10 +21,10 @@ Get all custom views in a system, optionally filtered by the `type` parameter.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/customviews?type=LIVE_VIEW' \
 --header 'Authorization: ••••••' \
-`
+```
 
 ## Response Body
 A JSON array of objects, where each object is an individual view.

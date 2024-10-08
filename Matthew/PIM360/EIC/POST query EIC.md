@@ -18,7 +18,7 @@ Submits an EIC query and returns all EICs that match the query.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/query' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -30,7 +30,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/query' \
         }
     ]
 }'
-`
+```
 
 ## Response Body
 A JSON object with an attribute `rows` containing an array of objects, one object for each EIC that matches the query. If no matching items are found then an empty array will be returned.

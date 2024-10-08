@@ -1,7 +1,7 @@
 # GET /timeline
 
 ## Description
-Gets a list of all activities from the activity timeline
+Gets a list of all activities from the activity timeline.
 
 ## Required Capabilities
 * CanUseAPI
@@ -19,15 +19,15 @@ Gets a list of all activities from the activity timeline
     * DELTA_REPORT
     * CLS_SNAPSHOT_IMPORT
 
-* **offset** (query) The nubmer of records to skip over, used for paging and defaults to 0
+* **offset** (query) The number of records to skip over, used for paging and defaults to 0.
 
-* **limit** (query) The number of records to return, default and maximum of 200
+* **limit** (query) The number of records to return, default and maximum of 200.
 
-* **own** (query) Whether to return only the authenticated users activities. `1` = `true`, defaults to `false`
+* **own** (query) Whether to return only the authenticated users activities. `1` = `true`, defaults to `false`.
 
-* **eic** (query) EIC handle to restrict activities to
+* **eic** (query) EIC handle to restrict activities to.
 
-* **hdl** (query) Handle of specific activity to get 
+* **hdl** (query) Handle of specific activity to get.
 
 ## Example Request
 ```
@@ -137,15 +137,14 @@ Array of objects where each object is an activity, containing details of the ind
             }
         ]
     }
-    .
-    .
-    .
 ]
 ```
 
 ## Response Status Codes
-* **200** Matching item has been found and successfully returned
-* **401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-* **500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+| **200** |Matching item has been found and successfully returned.|
+| **401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 
