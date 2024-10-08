@@ -1,21 +1,22 @@
 # POST /rundeltareport
 
 ## Description
-Submit a new Delta report activity
+Submit a new delta report activity.
 
 ## Required Capabilities
 * CanUseAPI
 * CanManageCls360Snapshot
+
 ## Request Headers
 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
 * **parameters** (required) (body) JSON object containing the parameters of the activity to run. Parameters are:
-    * `startnum` - The version number to start the report from
-    * `endnum` - The version number to end the report from
-    * `fileFormat` - The type of file to export. Must be one of `.txt` or `.xlsx`
-    * `domain` - The name of the class library to run the report on
+    * `startnum` - The version number to start the report from.
+    * `endnum` - The version number to end the report from.
+    * `fileFormat` - The type of file to export. Must be one of `.txt` or `.xlsx`.
+    * `domain` - The name of the class library/domain to run the report on.
 
 ## Example Request
 ```
@@ -31,7 +32,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/rundeltareport' \
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted delta report activity
+A JSON object containing the details of the submitted delta report activity.
 
 ## Example Response
 ```JSON
@@ -63,9 +64,11 @@ A JSON object containing the details of the submitted delta report activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

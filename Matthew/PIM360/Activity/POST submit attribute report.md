@@ -1,11 +1,12 @@
 # POST /etl_queue/activities/attribute_report
 
 ## Description
-Submits a Attribute report activity    
+Submits a attribute report activity.
 
 ## Required Capabilities
 * CanUseAPI
 * CanRunObjectAttributeReport
+
 ## Request Headers
 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
@@ -16,10 +17,10 @@ Submits a Attribute report activity
     * DOCUMENT
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
-* **eic_handle** (form data) The handle of the EIC to run the report on. If not provided then active data will be used
-* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma
-* **dataset_reference** (form data) optional datasetReference to allow the activity to be resubmitted at a later time
-* **output_name** (form data) The name of the file to generate. Will automatically append the correct file extension. Defaults to {item type}-export
+* **eic_handle** (form data) The handle of the EIC to run the report on. If not provided,  active data will be used.
+* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma.
+* **dataset_reference** (form data) Optional datasetReference to allow the activity to be resubmitted at a later time.
+* **output_name** (form data) The name of the file to generate. Will automatically append the correct file extension. Defaults to {item type}-export.
 
 ## Example Request
 ```
@@ -29,7 +30,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/attri
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted Attribute report activity
+A JSON object containing the details of the submitted attribute report activity.
 
 ## Example Response
 ```JSON
@@ -52,9 +53,11 @@ A JSON object containing the details of the submitted Attribute report activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

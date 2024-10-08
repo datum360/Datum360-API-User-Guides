@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/eic_related_obj_assoc/liveivew
 
 ## Description
-Submits an EIC relatated object association activity. Specifying an EIC to import into and a liveview query to determine which tags to import
+Submits an EIC related object association activity. Specifying an EIC to import into and a liveview query to determine which tags to import.
 
 ## Required Capabilities
 * CanUseAPI
@@ -43,7 +43,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/eic_r
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted EIC object association import activity
+A JSON object containing the details of the submitted EIC object association import activity.
 
 ## Example Response
 ```JSON
@@ -68,9 +68,11 @@ A JSON object containing the details of the submitted EIC object association imp
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

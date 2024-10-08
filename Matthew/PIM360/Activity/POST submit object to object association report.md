@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/object_association_report
 
 ## Description
-Submit an Object to Object Association report
+Submits an object to object association report.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,30 +12,31 @@ Submit an Object to Object Association report
 
 ## Parameters
 
-* **left_type** (required) (form data) the left object type in the report e.g tag in tag-to-doc. Must be one of:
+* **left_type** (required) (form data) The left object type in the report, e.g tag in tag-to-doc. Must be one of:
     * TAGGED_ITEM
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
     * DOCUMENT
 
-* **right_type** (required) (form data) the right object type in the report e.g doc in tag-to-doc
+* **right_type** (required) (form data) The right object type in the report e.g doc in tag-to-doc. Must be one of:
     * TAGGED_ITEM
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
     * DOCUMENT
-* **eic_handle** (required) (form data) the handle of the EIC to get data from
+* **eic_handle** (required) (form data) The handle of the EIC to use.
 
-* **export_mode** (required) (form data) The format of the file that will be genereated. Must be one of:
+* **export_mode** (required) (form data) The format of the file that will be generated. Must be one of:
     * xlsx
+    * json
     * delimited
 
-* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma
+* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma.
 
 * **left_join** (form data) Whether to show all "left" object types or not regardless of if they have associations. Must be one of:
     * on
     * off
 
-* **datasetReference** (form data) optional datasetReference to allow the activity to be resubmitted at a later time
+* **datasetReference** (form data) Optional datasetReference to allow the activity to be resubmitted at a later time.
 
 ## Example Request
 ```
@@ -48,7 +49,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/objec
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted object to object report activity
+A JSON object containing the details of the submitted object to object report activity.
 
 ## Example Response
 ```JSON
@@ -72,9 +73,11 @@ A JSON object containing the details of the submitted object to object report ac
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200**| Activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

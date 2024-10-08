@@ -1,7 +1,9 @@
 # POST /etl_queue/activities/{handle}
 
 ## Description
-Allows a previously submitted acitvity to be submitted again but with the parameters modified. Because this API allows any activity to be submitted it is required that the authenticated user can run all activity types. It is recommened instead to use the specific activity API endpoints that have more fine grained restrictions.
+Submits a previously submitted activity but with modified parameters.
+
+Because this API allows any activity to be submitted it is required that the authenticated user can run all activity types. It is recommended instead to use the specific activity API endpoints that have more fine grained restrictions.
 
 ## Required Capabilities
 * CanUseAPI
@@ -26,8 +28,8 @@ Allows a previously submitted acitvity to be submitted again but with the parame
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **handle** (required) (path) The handle of the activity to base this activity on
-* **paramters** (body) JSON object containing the parameters of the activity to run
+* **handle** (required) (path) The handle of the activity to base this activity on.
+* **parameters** (body) JSON object containing the parameters of the activity to run.
 
 ## Example Request
 ```
@@ -54,7 +56,7 @@ A JSON object containing the status and parameters of the specified activity. `s
 * COMPLETE
 * ERROR
 
-Activity parameters can be found in the `params` property
+Activity parameters can be found in the `params` property.
 
 ## Example Response
 ``` JSON 
@@ -74,9 +76,11 @@ Activity parameters can be found in the `params` property
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

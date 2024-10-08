@@ -1,7 +1,7 @@
-# POST /etl_queue/activities/export_activity
+# POST /etl_queue/activities/export
 
 ## Description
-Submit a new export activity
+Submit a new export activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,8 +11,7 @@ Submit a new export activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **parameters** (required) (body) JSON object containing the parameters of the activity to run
-
+* **parameters** (required) (body) JSON object containing the parameters of the activity to run.
 
 ## Example Request
 ```
@@ -32,7 +31,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/expor
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted export activity
+A JSON object containing the details of the submitted export activity.
 
 ## Example Response
 ```JSON
@@ -59,9 +58,11 @@ A JSON object containing the details of the submitted export activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 
