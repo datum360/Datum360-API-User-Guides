@@ -1,7 +1,7 @@
 # GET /activitylog/issues
 
 ## Description
-Gets the issues on a specific task of an activity
+Returns a list of issues related to a specific task of an activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,9 +11,9 @@ Gets the issues on a specific task of an activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **taskhdl** (required) (query) The handle of the task to get issues for
+* **taskhdl** (required) (query) The handle of the task to get issues for.
 
-* **acthdl** (query) optional filter to restrict to a specific activity
+* **acthdl** (query) optional filter to restrict to a specific activity.
 
 
 ## Example Request
@@ -43,8 +43,10 @@ A JSON object containing the properties `total_count`, `pos`, `rows`. `total_cou
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500**| Internal Server Error.|
 
 

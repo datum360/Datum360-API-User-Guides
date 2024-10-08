@@ -1,7 +1,7 @@
 # GET /etl_queue/activities/{handle}
 
 ## Description
-Gets the status and parameters of the specified activity
+Gets the status and parameters of the specified activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Gets the status and parameters of the specified activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **handle** (required) (path) Handle of the activity to get
+* **handle** (required) (path) Handle of the activity to get.
 
 
 ## Example Request
@@ -20,13 +20,14 @@ Gets the status and parameters of the specified activity
 curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/_husD3RvT12QMTE7bYe10g' \
 --header 'Authorization: ••••••'
 ```
+
 ## Response Body
 A JSON object containing the status and parameters of the specified activity. `status` can be one of:
 * PENDING
 * COMPLETE
 * ERROR
 
-Activity parameters can be found in the `params` property
+Activity parameters can be found in the `params` property.
 
 ## Example Response
 ``` JSON
@@ -46,9 +47,11 @@ Activity parameters can be found in the `params` property
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200**| Matching item has been found and successfully returned.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500**| Internal Server Error.|
 
 

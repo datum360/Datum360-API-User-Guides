@@ -1,7 +1,7 @@
 # GET /etl_queue/activities/reference/{actRef}
 
 ## Description
-Gets the activity assoicated with the latest run of the provided dataset reference
+Gets the activity associated with the latest run of the provided dataset reference.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Gets the activity assoicated with the latest run of the provided dataset referen
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **actRef** (required) (path) The dataset reference to use to fetch the activity
+* **actRef** (required) (path) The dataset reference to use to request the activity.
 
 
 ## Example Request
@@ -22,7 +22,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/refer
 ```
 
 ## Response Body
-JSON object containing the details of the matching activity
+JSON object containing the details of the matching activity.
 
 ## Example Response
 ```JSON
@@ -69,9 +69,11 @@ JSON object containing the details of the matching activity
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500**| Internal Server Error.|
 
 
