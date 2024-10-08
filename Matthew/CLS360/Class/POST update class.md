@@ -22,7 +22,7 @@ Update the details of an exisitng class, specified by the handle provided
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{

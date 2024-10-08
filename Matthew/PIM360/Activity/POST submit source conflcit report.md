@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/source_conflict_report
 
 ## Description
-Submits a source conflict report activity
+Submits a source conflict report activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -16,12 +16,12 @@ Submits a source conflict report activity
     * DOCUMENT
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
-* **export_mode** (required) (form data) The format of the file that will be genereated. Must be one of:
+* **export_mode** (required) (form data) The format of the file that will be generated. Must be one of:
     * xlsx
     * delimited
-* **eic_handle** (required) (form data) The handle of the EIC to run the report on.
-* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma
-* **datasetReference** (form data) optional datasetReference to allow the activity to be resubmitted at a later time
+* **eic_handle** (required) (form data) The handle of the EIC to use.
+* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma.
+* **datasetReference** (form data) Optional datasetReference to allow the activity to be resubmitted at a later time.
 
 ## Example Request
 ```
@@ -33,7 +33,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/sourc
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted source conflict report activity
+A JSON object containing the details of the submitted source conflict report activity.
 
 ## Example Response
 ```JSON
@@ -56,10 +56,12 @@ A JSON object containing the details of the submitted source conflict report act
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**400** Bad request, make sure that at least object type, export mode and eic handles are provided
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200**| Activity has been successfully submitted.|
+|**400** |Bad request, make sure the object type, export mode and eic handles are provided.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/wide_import
 
 ## Description
-Submits a wide import activity with the provided parameters
+Submits a wide import activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,25 +12,25 @@ Submits a wide import activity with the provided parameters
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
-* **eicHdl** (required) (form data) The handle of the file to load into
-* **etlSourceHdl** (required) (form data) The handle of the ETL source to use to load. This value can be retrieved from CLS360
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
+* **eicHdl** (required) (form data) The handle of the EIC to load into.
+* **etlSourceHdl** (required) (form data) The handle of the ETL source to use to load. This value can be retrieved from CLS360.
 * **objectType** (required) (form data) The type of object to upload. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
-* **deliverableHdl** (form data) The handle of the deliverable to upload against. This value can be retrieved by using the API `GET /eic/{eicHdl}/deliverables`
+* **deliverableHdl** (form data) The handle of the deliverable to upload against. This value can be retrieved by using the API `GET /eic/{eicHdl}/deliverables`.
 * **terminateAttributes** (form data) Whether to terminate attribute data or not, if so then which ones. Must be one of:
-    * ignore - Don't terminate any attriubute data. This is the default
-    * empty - Terminate attribute data where the attribute is present in the load file, but has no value provided. This is useful for removing existing attribute data
-    * missing - Terminate attribute data where the attribute is not present in the load file
-* **ensData** (form data) The name of the ENS (Engineering numbering specification) to use
-* **terminateMissing** (form data) boolean value, whether tags missing from the load file should be terminated or not. Defaults to `false`
-* **loadUnknownAttributes** (form data) boolean value, whether attributes that are present in the load file but not present in CLS360 should be imported. Defaults to `true`
+    * ignore - Don't terminate any attribute data. This is the default.
+    * empty - Terminate attribute data where the attribute is present in the load file, but has no value provided. This is useful for removing existing attribute data.
+    * missing - Terminate attribute data where the attribute is not present in the load file.
+* **ensData** (form data) The name of the ENS (Engineering Numbering Specification) to use.
+* **terminateMissing** (form data) Boolean value. Specifies whether tags missing from the load file should be terminated or not. Defaults to `false`.
+* **loadUnknownAttributes** (form data) Boolean value. Specifies whether attributes that are present in the load file but not present in CLS360 should be imported. Defaults to `true`.
 * **classification** (form data) What method to use for classifying tags. Must be one of:
-    * cls - Use the class name specified in the laod file. This is the default value
-    * ens - Use the specified ENS to attempt to classify the tags
+    * cls - Use the class name specified in the load file. This is the default value.
+    * ens - Use the specified ENS to attempt to classify the tags.
 * **worksheets** (form data) Array of sheet names. If an Excel file is used for loading data then this specifies which workbook sheets to load from.
 
 ## Example Request
@@ -45,7 +45,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/wide_
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted wide import activity
+A JSON object containing the details of the submitted wide import activity.
 
 ## Example Response
 ```JSON
@@ -85,10 +85,12 @@ A JSON object containing the details of the submitted wide import activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**400** Bad request. Check for error messages on the response
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**400** |Bad request. Check for error messages on the response.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

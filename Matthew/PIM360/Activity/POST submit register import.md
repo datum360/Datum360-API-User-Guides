@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/register_import
 
 ## Description
-Submit a register import activity
+Submits a register import activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,28 +12,30 @@ Submit a register import activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
 * **eicHdl** (required) (form data) The handle of the EIC to upload into.
-* **etlSourceHdl** (required) (form data) The handle of the ETL source to use to load. This value can be retrieved from CLS360
+* **etlSourceHdl** (required) (form data) The handle of the ETL source to use to load. This value can be retrieved from CLS360.
 * **objectType** (required) (form data) The type of object to upload. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
-* **deliverableHdl** (form data) The handle of the deliverable to upload against. This value can be retrieved by using the API `GET /eic/{eicHdl}/deliverables`
+* **deliverableHdl** (form data) The handle of the deliverable to upload against. This value can be retrieved by using the API `GET /eic/{eicHdl}/deliverables`.
 * **worksheets** (form data) Array of sheet names. If an Excel file is used for loading data then this specifies which workbook sheets to load from.
 
 ## Example Request
-curl --location 'https://dap-demo.pim360.io/api/etl_queue/activities/register_import' \
+```
+curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/register_import' \
 --header 'Authorization: ••••••' \
 --form 'upfile=@"postman-cloud:///1ef53a5e-ffba-4390-99c0-9541a8171f33"' \
 --form 'eicHdl="XYSp3hn0TDuJV-NX6MrTBQ"' \
 --form 'etlSourceHdl="ECDTZbe6RyaFSKwzBgtFHQ"' \
 --form 'objectType="TAGGED_ITEM"' \
 --form 'worksheets="Sheet1"'
+```
 
 ## Response Body
-A JSON object containing the details of the submitted regster import activity
+A JSON object containing the details of the submitted register import activity.
 
 ## Example Response
 ```JSON
@@ -72,9 +74,11 @@ A JSON object containing the details of the submitted regster import activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

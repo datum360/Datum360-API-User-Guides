@@ -68,7 +68,7 @@ JSON object describing the revision on the specified deliverable and all version
                             "dateTime": "2024-09-05T05:13:25.875Z",
                             "_id": "66d93df51e5bbd7ce895b776"
                         },
-                        "path": "dap-demo-ddm360/42b9ece9-774e-410e-83c6-15d90bd3e5ae",
+                        "path": "{{systemName}}-ddm360/42b9ece9-774e-410e-83c6-15d90bd3e5ae",
                         "objectId": "42b9ece9-774e-410e-83c6-15d90bd3e5ae",
                         "_id": "66d93df51e5bbd7ce895b774",
                         "derivativeSrc": "bim360docs",

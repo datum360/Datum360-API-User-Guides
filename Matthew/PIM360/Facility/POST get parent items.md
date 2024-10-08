@@ -18,7 +18,7 @@ Get parent items for the provided condition.
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/facility-explorer/root' \
+curl --location 'https://{{systemName}}.pim360.io/api/facility-explorer/root' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{"conditions":{"plant code":"TKF"},"type":"TAGGED_ITEM","skip":0,"count":"TRUE"}'

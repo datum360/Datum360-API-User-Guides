@@ -26,7 +26,7 @@ Submits a datatyping errors report activity.
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/etl_queue/activities/datatyping_errors_report' \
+curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/datatyping_errors_report' \
 --header 'Authorization: ••••••' \
 --form 'object_type="TAGGED_ITEM"' \
 --form 'export_mode="xlsx"' \

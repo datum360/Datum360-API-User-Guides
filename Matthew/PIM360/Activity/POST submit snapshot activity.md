@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/snapshot
 
 ## Description
-Submits a snapshot activity to the specified version
+Submits a snapshot activity to a specified version.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,11 +12,11 @@ Submits a snapshot activity to the specified version
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **parameters** (required) (body) JSON object describing the snasphot activity to submit, the obect has 3 properties: `version`, `comment`, `cl_name`. `version` specifies which version of the class library to snapshot to. `comment` specifies the comment to put against the snapshot. `cl_name` specifies the name of the Class Library being in the snapshot. If any or all data is missing then a snapshot will be run against the current version of the snapshot i.e it will not be increased to the lastest available version
+* **parameters** (required) (body) JSON object describing the snapshot activity to submit. The object has 3 properties: `version`, `comment`, `cl_name`. `version` specifies which version of the class library to snapshot to. `comment` specifies the comment to put against the snapshot. `cl_name` specifies the name of the class library. If any or all data is missing then a snapshot will be run against the current version of the snapshot, i.e it will not be increased to the latest available version.
 
 ## Example Request
-`
-curl --location 'https://dap-demo.pim360.io/api/etl_queue/activities/snapshot' \
+```
+curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/snapshot' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{
@@ -24,10 +24,10 @@ curl --location 'https://dap-demo.pim360.io/api/etl_queue/activities/snapshot' \
     "comment": "API Snapshot",
     "cl_name": "CFIHOS v1.5.1"
 }'
-`
+```
 
 ## Response Body
-A JSON object containing the details of the submitted snapshot activity
+A JSON object containing the details of the submitted snapshot activity.
 
 ## Example Response
 ```JSON
@@ -55,8 +55,10 @@ A JSON object containing the details of the submitted snapshot activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

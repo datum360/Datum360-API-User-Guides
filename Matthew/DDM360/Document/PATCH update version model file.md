@@ -63,7 +63,7 @@ JSON object containing the newly updated version object
                 "dateTime": "2024-09-04T01:29:11.199Z",
                 "_id": "66d7b7e707fbb95949d33536"
             },
-            "path": "dap-demo-ddm360/171be990-656e-4223-9292-0084553fe612",
+            "path": "{{systemName}}-ddm360/171be990-656e-4223-9292-0084553fe612",
             "objectId": "171be990-656e-4223-9292-0084553fe612",
             "_id": "66d7b7e707fbb95949d33534",
             "derivativeSrc": "bim360docs",

@@ -21,7 +21,7 @@ Submits an EIC impact report activity.
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/etl_queue/activities/eic_impact_report' \
+curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/eic_impact_report' \
 --header 'Authorization: ••••••' \
 --form 'export_mode="xlsx"' \
 --form 'eic_handle="XYSp3hn0TDuJV-NX6MrTBQ"'

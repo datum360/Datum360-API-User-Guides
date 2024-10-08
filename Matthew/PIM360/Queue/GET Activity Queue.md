@@ -16,7 +16,7 @@ No parameters
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.pim360.io/api/etl_queue' \
+curl --location 'https://{{systemName}}.pim360.io/api/etl_queue' \
 --header 'Authorization: ••••••'
 ```
 
