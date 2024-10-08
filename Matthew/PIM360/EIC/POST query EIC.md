@@ -1,7 +1,7 @@
 # POST /eic/query
 
 ## Description
-Submit an EIC query and return all EICs that match the query
+Submits an EIC query and returns all EICs that match the query.
 
 ## Required Capabilities
 * CanUseAPI
@@ -57,9 +57,11 @@ A JSON object with an attribute `rows` containing an array of objects, one objec
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**400** Bad request, check that the EIC attribute handle provided is valud.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**400** |Bad request, check that the EIC attribute handle provided is valid.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

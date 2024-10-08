@@ -1,7 +1,7 @@
 # POST /eic/close
 
 ## Description
-Submits a Close EIC activity for the provided EIC.
+Submits a close EIC activity for the provided EIC.
 
 ## Required Capabilities
 * CanUseAPI
@@ -13,7 +13,7 @@ Submits a Close EIC activity for the provided EIC.
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-**query** (required) (body) JSON object containing a property `eicHdl` specifying which EIC to close
+**query** (required) (body) JSON object containing a property `eicHdl` specifying which EIC to close.
 
 
 ## Example Request
@@ -71,8 +71,10 @@ A JSON object containing details of the close EIC activity that has been submitt
 ```
 
 ## Response Status Codes
-**200** Close EIC activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error. Check that the provided EIC handle is valid
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Close EIC activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error. Check that the provided EIC handle is valid.|
 
 

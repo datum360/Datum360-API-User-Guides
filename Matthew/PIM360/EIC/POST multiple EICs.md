@@ -1,7 +1,7 @@
 # POST /eic/publish/multiple    
 
 ## Description
-Allows multiple EICs to be submitted for publish in one activity
+Allows multiple EICs to be submitted for publish in one activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -54,9 +54,11 @@ A JSON object containing details of the publish activity that has been submitted
 ```
 
 ## Response Status Codes
-**200** EIC has been successfully submitted for publish. This does not guarantee that the publish itself is successful.
-**400** Bad request, check that handles have been provdided
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that all provided handles are valid
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |EICs have been successfully submitted for publish. This does not guarantee that the publish has been successful.|
+|**400** |Bad request, check that handles have been provided.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that all provided handles are valid|
+|**500** |Internal Server Error.|
 

@@ -1,7 +1,7 @@
 # POST /eic/publish
 
 ## Description
-Publishes the provided EIC
+Publishes the provided EIC.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Publishes the provided EIC
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-**query** (required) (body) An object containing the handle of the EIC to publish
+**query** (required) (body) An object containing the handle of the EIC to publish.
 
 
 ## Example Request
@@ -49,9 +49,11 @@ A JSON object containing details of the publish activity that has been submitted
 ```
 
 ## Response Status Codes
-**200** EIC has been successfully submitted for publish. This does not guarantee that the publish itself is successful.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |EIC has been successfully submitted for publish. This does not guarantee that the publish has been successful.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 
