@@ -1,7 +1,7 @@
 # GET /deliverables
 
 ## Description
-List all deliverables in DDM360
+List all deliverables in DDM360.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,17 +12,17 @@ List all deliverables in DDM360
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-The below parameters can be used to filter the deliverables returned
+The below parameters can be used to filter the deliverables returned.
 
-* **eicNumber** (query) The EIC to get deliverables from
+* **eicNumber** (query) The EIC number of the EIC to filter deliverables by.
 
-* **docId** (query) The PIM360 Document ID to match to
+* **docId** (query) The PIM360 Document ID to match to.
 
-* **facId** (query) Get deliverables from this facility
+* **facId** (query) Facility to retrieve deliverables from.
 
-* **pageSize** (query) The maximum number of deliverables to return. Default and maximum of 200
+* **pageSize** (query) The maximum number of deliverables to return. Default and maximum of 200.
 
-* **page** (query) Skip entries in multiples of page size to return the next set of deliverables
+* **page** (query) Skip entries in multiples of page size to return the next set of deliverables.
 
 
 ## Example Request
@@ -32,7 +32,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/deliverables' \
 ```
 
 ## Response Body
-JSON object containing an array `list` where each object in the array is a deliverable. `hasMore` indicates whether there are more deliverables to fetch on the next page. `@nextLink` provides a URL to use to get the next batch
+JSON object containing an array `list` where each object in the array is a deliverable. `hasMore` indicates whether there are more deliverables to fetch on the next page. `@nextLink` provides a URL to use to get the next batch.
 
 ## Example Response
 ```JSON
@@ -66,8 +66,10 @@ JSON object containing an array `list` where each object in the array is a deliv
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully returned.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**500** |Internal Server Error.
 
 
