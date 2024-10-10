@@ -1,7 +1,7 @@
 # GET /documents/{docHdl}/revisions/{revHdl}/versions
 
 ## Description
-Get all versions for a specific revision of a specific document
+Gets all versions for a specific revision of a specific document.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,9 +11,9 @@ Get all versions for a specific revision of a specific document
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **docHdl** (required) (path) The handle of the document to get versions for
+* **docHdl** (required) (path) The handle of the document.
 
-* **revHdl** (required) (path) The handle of the revision to get versions for
+* **revHdl** (required) (path) The handle of the revision.
 
 ## Example Request
 ```
@@ -22,7 +22,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/documents/Pr__5rkHTp2Us5fy
 ```
 
 ## Response Body
-JSON array containing all of the versions for the requested document revision
+JSON array containing all of the versions for the requested document revision.
 
 ## Example Response
 ```JSON
@@ -54,9 +54,11 @@ JSON array containing all of the versions for the requested document revision
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully returned.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handle has been provided and is correct.
+**500** |Internal Server Error.
 
 
