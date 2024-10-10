@@ -1,7 +1,7 @@
 # GET /tags/{facId}/{tagId}/documents
 
 ## Description
-Get all documents that the provided tag is present in
+Gets all documents that the provided tag is present in.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,9 +11,9 @@ Get all documents that the provided tag is present in
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **facId** (required) (path) The name of the facility that the tag belongs to
+* **facId** (required) (path) The name of the facility that the tag belongs to.
 
-* **tagId** (required) (path) The name of the tag to get files for
+* **tagId** (required) (path) The name of the tag.
 
 
 ## Example Request
@@ -23,7 +23,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/tags/TKF/TK-1003/documents
 ```
 
 ## Response Body
-JSON array of objects where each object is a document that the tag appears in
+JSON array of objects where each object is a document that the tag appears in.
 
 ## Example Response
 ```JSON
@@ -103,9 +103,11 @@ JSON array of objects where each object is a document that the tag appears in
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully returned.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handle has been provided and is correct.
+**500** |Internal Server Error.
 
 
