@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes
 
 ## Description
-Gets all Classes from the specified class library/domain. An optional filter can be provided to specify which Classes to return
+Gets all classes from the specified class library/domain. An optional filter can be provided to specify which classes to return.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,30 +11,30 @@ Gets all Classes from the specified class library/domain. An optional filter can
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
- * **domHdl** (required) (path) Handle of the class library/domain to use
+ * **domHdl** (required) (path) Handle of the class library/domain to use.
 
- * **filter** (query) Optional filter to search classes. Supports operators "eq" (equal) and "cnt" (contains), combine conditions with "and". Fields and values that contain spaces need wrapping with [square braces]
+ * **filter** (query) Optional filter. Supports operators "eq" (equal) and "cnt" (contains), combine conditions with "and". Fields and values that contain spaces need wrapping with [square braces].
     Example:
-    `Name cnt CABLE and [Object Type] eq Functional`
+    `Name cnt CABLE and [Object Type] eq Functional`  
+    
+    The filter should also be URL encoded when added to the query string. The above example would look like:
+        `Name%20cnt%20CABLE%20and%20%5BObject%20Type%5D%20eq%20Functional`
+    Replacing spaces with %20 and square brackets with %5B [ and %5D ]
 
-The filter should also be URL encoded when added to the query. The above example would look like:
-    `Name%20cnt%20CABLE%20and%20%5BObject%20Type%5D%20eq%20Functional`
-Replacing spaces with %20 and square brackets with %5B [ and %5D ]
+* **pageSize** (query) Maximum number of entries to return. Default value is 200.
 
-* **pageSize** (query) Number of entries to return. Maximum and Default of 200
+* **page** (query) Skip entries in multiples of `pageSize`. e.g if `pageSize` is 200 and `page` is 2, then 400 records will be skipped and records 400 - 600 will be returned. If `pageSize` has not been provided then a default value of 200 will be assumed.
 
-* **page** (query) Skip entries in multiples of `pageSize`. e.g if `pageSize` is 200 and `page` is 2, then 400 records will be skipped and records 400 - 600 will be returned. If `pageSize` has not been provided then a default value of 200 will be assumed
-
-* **version** (query) Which version of the class library/domain to use when returning data. If no value is provided, then the current version will be used.
+* **version** (query) Which version of the class library/domain to use. If no value is provided, then the current version will be used.
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes?filter=Name%20eq%20cabinet%20and%20%5BObject%20Type%5D%20eq%20Functional' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes?filter=Name%20eq%20cabinet%20and%20%5BObject%20Type%5D%20eq%20Functional&version=14' \
 --header 'Authorization: ••••••' \
 ```
 
 ## Response Body
-A JSON object containing an array `value` where each entry in the array is a class that matches the provided filter
+A JSON object containing an array `value` where each entry in the array is a class that matches the provided filter.
 
 ## Example Response
 ```JSON
@@ -74,9 +74,11 @@ A JSON object containing an array `value` where each entry in the array is a cla
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the class library handle is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the class library/domain handle is correct.|
+|**500** |Internal Server Error.|
 
 

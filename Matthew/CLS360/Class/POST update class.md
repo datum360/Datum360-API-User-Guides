@@ -1,7 +1,7 @@
 # POST /domains/{domHdl}/classes/{clsHdl}
 
 ## Description
-Update the details of an exisitng class, specified by the handle provided
+Update the details of an existing class
 
 ## Required Capabilities
 * CanUseAPI
@@ -13,11 +13,11 @@ Update the details of an exisitng class, specified by the handle provided
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Domain/Class Library to get the class from
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use
 
 * **classHdl** (required) (path) The handle of the class to update
 
-* **class** (required) (body) JSON object containing the new details of the class to update. To make sure that all required data is provided, it is recommended to run the `GET /domains{domHdl}/classes/{clsHdl}` API first. Then update the response with the new details.
+* **class** (required) (body) JSON object containing the new details of the class. To make sure that all required data is provided, it is recommended to run the `GET /domains{domHdl}/classes/{clsHdl}` API first. Then update the response with the new details.
 
 
 ## Example Request
@@ -51,9 +51,9 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
     .
     .
 }'
-
+```
 ## Response Body
-Error message or "OK" if successul
+Error message or "OK" if successful
 
 ## Example Response
 ```
@@ -61,8 +61,11 @@ Error message or "OK" if successul
 ```
 
 ## Response Status Codes
-**200** Item has been sucessfully updated
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error. Check body for error message
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Item has been successfully updated.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**409** |Conflict with existing class.|
+|**500** |Internal Server Error. Check body for error message.|
 
 

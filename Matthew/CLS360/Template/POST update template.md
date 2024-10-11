@@ -12,7 +12,7 @@ Update an existing template
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Domain/Class Library to use.
+* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
 
 * **tmpHdl** (required) (path) The handle of the template to update.
 
@@ -314,9 +314,11 @@ If the update has been successful then `OK` will be returned. Otherwise an error
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully updated.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully updated.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

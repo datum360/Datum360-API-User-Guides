@@ -1,7 +1,7 @@
-# GFT /domains/{{domHdl}}/snapshot
+# GFT /domains/{domHdl}/snapshot
 
 ## Description
-Gets the full class library snapshot, used by PIM360 at a specified version
+Gets the full class library snapshot at a specified version
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,11 +11,11 @@ Gets the full class library snapshot, used by PIM360 at a specified version
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) Handle of the class library/domain to get
+* **domHdl** (required) (path) Handle of the class library/domain to get.
 
-* **version** (required) (query) The version of the class library to get the snapshot for. Must be greater than 0 and less than or equal to the current version. If a number greater than the current version is provided, then the current version will be returned. Not providing a version at all will return no class library data.
+* **version** (required) (query) The version of the class library to use. Must be greater than 0 and less than or equal to the current version. If a number greater than the current version is provided, then the current version will be returned. Not providing a version at all will return no data.
 
-* **fromVersion** (query) optionally filter out snapshot data to only include information after a provided version
+* **fromVersion** (query) Optionally filter out snapshot data to only include information after a provided version.
 
 
 ## Example Request
@@ -25,7 +25,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-JSON object containing a full copy of the CLS360 snapshot. Anything that can be found in the "Object Browser" section of the UI is returned in the "classes" array. Anything that can be found in the "CL4CL" section of the UI is returned in the "CL4CL" array
+JSON object containing a full copy of the snapshot. Anything that can be found in the "Object Browser" section of the UI is returned in the "classes" array. Anything that can be found in the "CL4CL" section of the UI is returned in the "CL4CL" array.
 
 ## Example Response
 ```JSON
@@ -54,9 +54,11 @@ JSON object containing a full copy of the CLS360 snapshot. Anything that can be 
 ```
 
 ## Response Status Codes
-**200** Snapshot version has been successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Snapshot data has been successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 
