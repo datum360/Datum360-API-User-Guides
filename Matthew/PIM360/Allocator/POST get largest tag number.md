@@ -31,7 +31,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/allocator/lastnumerics' \
 ```
 
 ## Response Body
-JSON object containing the property `tag` which contains the matching item number. If no matching item is found then.
+JSON object containing the property `tag` which contains the matching item number. If no matching item is found then `null` is returned for the tag.
 
 ## Example Response
 ```JSON

@@ -23,7 +23,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
 ```
 
 ## Response Body
-A JSON object with a property `rows` containing an object for each EIC. Each EIC object contains basic information such as ID (number), status and id (hdl), as well as all of the attributes on that EIC. EIC attributes are stored as key-value pairs on the object, where the key is the attribute handle, and the value is the value of the attribute. To convert an attribute handle to a name, it must be passed to the `GET classes` CLS360 API. 
+A JSON object with a property `rows` containing an object for each EIC. Each EIC object contains basic information such as ID (number), status and id (hdl), as well as all of the attributes on that EIC. EIC attributes are stored as key-value pairs on the object, where the key is the attribute handle, and the value is the value of the attribute. To convert an attribute handle to a name, it must be passed to the `GET classes/{classHdl}` CLS360 API. 
 
 ## Example Response
 ```JSON
