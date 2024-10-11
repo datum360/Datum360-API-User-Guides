@@ -12,7 +12,7 @@ Returns the essential attributes that are required for creating an object of the
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
 * **type** (required) (path) The type of item, must be one of:
     * TAGGED_ITEM

@@ -13,7 +13,7 @@ Update the details of an existing class
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use
+* **domHdl** (required) (path) The handle of the class library/domain to use
 
 * **classHdl** (required) (path) The handle of the class to update
 
