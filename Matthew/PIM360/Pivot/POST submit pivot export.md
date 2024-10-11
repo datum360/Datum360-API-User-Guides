@@ -62,7 +62,7 @@ Filter Structure:
 
         * **uom**: If a measure attribute is being queried, the value uom can be specified here. Can also be ``$any`` or ``$isempty``.
 * **fields** array of objects, where each object is an attribute to include. Object structure is:
-    * **handle** handle of the attribute to include
+    * **handle** handle of the attribute to include.
 * **summaries** JSON array of objects where each object is a summary attribute. Object structure is:
     * **aggregator** Type of the summary attribute. Can be one of: 
         * sum
