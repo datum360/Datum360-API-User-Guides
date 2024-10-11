@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes
 
 ## Description
-Gets all classes from the specified class library/domain. An optional filter can be provided to specify which classes to return
+Gets all classes from the specified class library/domain. An optional filter can be provided to specify which classes to return.
 
 ## Required Capabilities
 * CanUseAPI

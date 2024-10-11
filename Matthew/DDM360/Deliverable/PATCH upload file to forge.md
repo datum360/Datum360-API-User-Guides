@@ -1,7 +1,7 @@
 # PATCH /deliverables/{delHdl}/files/{fileHdl}/forgeupload
 
 ## Description
-Submit a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer
+Submits a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer
 
 ## Required Capabilities
 * CanUseAPI
@@ -71,7 +71,7 @@ JSON object with the response from the upload.
             "dateTime": "2024-09-05T05:14:26.609Z",
             "_id": "66d93e321e5bbd7ce895b7de"
         },
-        "path": "dap-demo-ddm360/ff6402c7-6048-4711-84aa-0e0b8e370c05",
+        "path": "{{systemName}}-ddm360/ff6402c7-6048-4711-84aa-0e0b8e370c05",
         "objectId": "ff6402c7-6048-4711-84aa-0e0b8e370c05",
         "_id": "66d93e321e5bbd7ce895b7dc",
         "derivativeSrc": "bim360docs",

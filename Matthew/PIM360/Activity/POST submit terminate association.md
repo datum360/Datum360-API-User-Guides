@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/association_terminate
 
 ## Description
-Submits a terminate association activity
+Submits a terminate association activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,8 +12,8 @@ Submits a terminate association activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
-* **eicHdl** (required) (form data) The handle of the file to load into
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
+* **eicHdl** (required) (form data) The handle of the file to load into.
 * **fromType** (required) (form data) The source item type. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
@@ -28,15 +28,17 @@ Submits a terminate association activity
 
 
 ## Example Request
+```
 curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/association_terminate' \
 --header 'Authorization: ••••••' \
 --form 'upFile=@"postman-cloud:///1ef546c1-abf2-43b0-80b9-f4fab02b61e3"' \
 --form 'eicHdl="XYSp3hn0TDuJV-NX6MrTBQ"' \
 --form 'fromType="TAGGED_ITEM"' \
 --form 'toType="DOCUMENT"'
+```
 
 ## Response Body
-A JSON object containing the details of the submitted terminate association activity
+A JSON object containing the details of the submitted terminate association activity.
 
 ## Example Response
 ```JSON
@@ -67,9 +69,11 @@ A JSON object containing the details of the submitted terminate association acti
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

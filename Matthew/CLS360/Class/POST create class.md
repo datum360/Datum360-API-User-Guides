@@ -1,7 +1,7 @@
 # POST /domains/{domHdl}/classes
 
 ## Description
-Allows the creation of a new class in the specified Class Library/Domain
+Allows the creation of a new class in the specified class library/domain
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Allows the creation of a new class in the specified Class Library/Domain
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) Handle of the Class Library/Domain to create the class in.
+* **domHdl** (required) (path) Handle of the class library/domain to create the class in.
 
 * **class** (required) (body) JSON structure of the class to create.
 

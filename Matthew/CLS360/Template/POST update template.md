@@ -12,7 +12,7 @@ Update an existing template
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
 * **tmpHdl** (required) (path) The handle of the template to update.
 

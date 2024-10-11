@@ -1,11 +1,12 @@
 # POST /etl_queue/activities/conflict_report
 
 ## Description
-Submits a conflict report activity
+Submits a EIC conflict report activity.
 
 ## Required Capabilities
 * CanUseAPI
 * CanRunConflictReport
+
 ## Request Headers
 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
@@ -16,14 +17,14 @@ Submits a conflict report activity
     * DOCUMENT
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
-* **outputFormat** (required) (form data) The format of the file that will be genereated. Must be one of:
+* **outputFormat** (required) (form data) The format of the file that will be generated. Must be one of:
     * xlsx
     * delimited
-* **eicHdls** (required) (form data) comma delimited list of EIC handles to use
-* **fromDate** (required) (form data) start date of the report timeframe. Date must be in the format YYYY-MM-DD
-* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma
-* **toDate** (form data) end date of the report timeframe. Defaults to the current date. Date must be in the format YYYY-MM-DD
-* **datasetReference** (form data) optional datasetReference to allow the activity to be resubmitted at a later time
+* **eicHdls** (required) (form data) Comma delimited list of EIC handles to use.
+* **fromDate** (required) (form data) Start date of the report timeframe. Date must be in the format YYYY-MM-DD.
+* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma.
+* **toDate** (form data) End date of the report timeframe. Defaults to the current date. Date must be in the format YYYY-MM-DD.
+* **datasetReference** (form data) Optional datasetReference to allow the activity to be resubmitted at a later time.
 
 ## Example Request
 ```
@@ -38,7 +39,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/confl
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted conflict report activity
+A JSON object containing the details of the submitted EIC conflict report activity.
 
 ## Example Response
 ```JSON
@@ -62,10 +63,12 @@ A JSON object containing the details of the submitted conflict report activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**400** Bad request, make sure that at least object type, output format, eic handles and from date are provided
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**400** |Bad request, make sure that object type, output format, eic handles and from date are provided.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error|
 
 

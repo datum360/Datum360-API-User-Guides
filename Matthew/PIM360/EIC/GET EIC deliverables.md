@@ -1,7 +1,7 @@
 # GET /eic/{eicHdl}/deliverables
 
 ## Description
-Gets a list of all deliverables that are associated with the provided EIC
+Gets a list of all deliverables that are associated with the provided EIC.
 
 ## Required Capabilities
 * CanUseAPI
@@ -14,17 +14,17 @@ Gets a list of all deliverables that are associated with the provided EIC
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* eicHdl (required) (path) The handle of the EIC to get deliverables for
+* eicHdl (required) (path) The handle of the EIC to use.
 
 
 ## Example Request
-`
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/XYSp3hn0TDuJV-NX6MrTBQ/deliverables' \
 --header 'Authorization: ••••••'
-`
+```
 
 ## Response Body
-JSON object with a property `Deliverables` containaing an array of objects. Each object in the array is a deliverable. Each deliverable lists all of the files that have been loaded against  it.
+JSON object with a property `Deliverables` containing an array of objects. Each object in the array is a deliverable. Each deliverable lists all of the files that have been loaded against it.
 
 ## Example Response
 ```JSON
@@ -70,10 +70,10 @@ JSON object with a property `Deliverables` containaing an array of objects. Each
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-
-**500** Internal Server Error. Check that the provided EIC handle is valid
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error. Check that the provided EIC handle is valid.|
 
 

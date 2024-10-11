@@ -11,7 +11,7 @@ For a given ETL Data Target class get all of the attribute output mappings for t
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
 * **classHdl** (required) (path) The handle of the class to use. This must be a class of type "Data Target", if any other handle is used then a 404 error will be returned.
 

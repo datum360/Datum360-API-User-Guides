@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/association_import
 
 ## Description
-Submit a association import activity
+Submits an association import activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,8 +11,8 @@ Submit a association import activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
-* **eicHdl** (required) (form data) The handle of the file to load into
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
+* **eicHdl** (required) (form data) The handle of the EIC to import into.
 * **fromType** (required) (form data) The source item type. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
@@ -36,7 +36,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/assoc
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted narrow import activity
+A JSON object containing the details of the submitted narrow import activity.
 
 ## Example Response
 ```JSON
@@ -67,9 +67,11 @@ A JSON object containing the details of the submitted narrow import activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500**| Internal Server Error.|
 
 

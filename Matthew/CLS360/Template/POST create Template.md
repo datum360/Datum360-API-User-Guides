@@ -12,7 +12,7 @@ Allows the creation of a new template in CL4CL.
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Class Library/Domain to create the template in.
+* **domHdl** (required) (path) The handle of the class library/domain to create the template in.
 
 * **template** (required) (body) The JSON object representing the template to create.
 

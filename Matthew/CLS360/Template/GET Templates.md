@@ -12,9 +12,9 @@ Returns a list of all templates.
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
-* **version** (query) The version of the Class Library/Domain to use. Must be a number, defaults to the latest available version if not provided.
+* **version** (query) The version of the class library/domain to use. Must be a number, defaults to the latest available version if not provided.
 
 ## Example Request
 ```

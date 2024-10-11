@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/terminate_items
 
 ## Description
-Submits a terminate activity
+Submits a terminate items activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,8 +11,8 @@ Submits a terminate activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
-* **eicHdl** (required) (form data) The handle of the file to load into
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
+* **eicHdl** (required) (form data) The handle of the file to load into.
 * **objectType** (required) (form data) The type of object to upload. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
@@ -31,7 +31,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/termi
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted terminate item activity
+A JSON object containing the details of the submitted terminate items activity.
 
 ## Example Response
 ```JSON
@@ -61,9 +61,11 @@ A JSON object containing the details of the submitted terminate item activity
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200**| Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500**| Internal Server Error.|
 
 

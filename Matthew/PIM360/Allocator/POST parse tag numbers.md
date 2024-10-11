@@ -13,10 +13,10 @@ Takes a list of tag numbers separated by \n, parses them according to the provid
 
 ## Parameters
 * **taglist** (required) (body) JSON object containing the follow properties:
-    * objType - The type of item to parse ID numbers for, must be one of: TAGGED_ITEM, DOCUMENT, EQUIPMENT_ITEM, EQUIPMENT_MODEL
-    * facility - The Facility to use when checking for items that already exist
-    * ensName - The name of the ENS to use when validating item numbers
-    * taglist - List of item numbers to validate, separated by \n
+    * objType - The type of item to parse ID numbers for, must be one of: TAGGED_ITEM, DOCUMENT, EQUIPMENT_ITEM, EQUIPMENT_MODEL.
+    * facility - The facility to use when checking for items that already exist.
+    * ensName - The name of the ENS to use when validating item numbers.
+    * taglist - List of item numbers to validate, separated by \n.
 
 
 ## Example Request
@@ -33,7 +33,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/allocator/parse' \
 ```
 
 ## Response Body
-JSON object containing a summary of the parse results, details of each item are held as objects in the array `parsedItems`
+JSON object containing a summary of the parse results, details of each item are held as objects in the array `parsedItems`.
 
 ## Example Response
 ```JSON
@@ -248,8 +248,10 @@ JSON object containing a summary of the parse results, details of each item are 
 ```
 
 ## Response Status Codes
-**200** Items have been successfully submitted to be validated. This does not guarantee that provided items are valid.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error. Check that all parameters are provided. Check that provided ENS name exists and is correct
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Items have been successfully submitted to be validated. This does not guarantee that provided items are valid.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500**| Internal Server Error. Check that all parameters are provided. Check that provided ENS name exists and is correct.|
 
 

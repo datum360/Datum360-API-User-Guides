@@ -1,7 +1,7 @@
 # POST /facility-explorer/tree
 
 ## Description
-Submit a Facility Explorer query and return the definition
+Submits a Facility Explorer query and return the definition.
 
 ## Required Capabilities
 * CanUseAPI
@@ -50,8 +50,10 @@ JSON object with a `rows` array, where each object in the array is a row in the 
 ```
 
 ## Response Status Codes
-**200** Query has been sucessfully submitted and returned.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Query has been successfully submitted and returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

@@ -83,7 +83,7 @@ JSON array of objects where each object is a document that the tag appears in
                                     "dateTime": "2024-09-05T23:04:04.326Z",
                                     "_id": "66da38e4dbfeb99467e27f00"
                                 },
-                                "path": "dap-demo-ddm360/b6ad703a-90e7-4f41-b51e-ab122e6aba98",
+                                "path": "{{systemName}}-ddm360/b6ad703a-90e7-4f41-b51e-ab122e6aba98",
                                 "objectId": "b6ad703a-90e7-4f41-b51e-ab122e6aba98",
                                 "_id": "66da38e4dbfeb99467e27efe",
                                 "derivativeSrc": "bim360docs",

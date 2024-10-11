@@ -13,7 +13,7 @@ Update the details of an existing class
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use
+* **domHdl** (required) (path) The handle of the class library/domain to use
 
 * **classHdl** (required) (path) The handle of the class to update
 
@@ -22,7 +22,7 @@ Update the details of an existing class
 
 ## Example Request
 ```
-curl --location 'https://dap-demo.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{

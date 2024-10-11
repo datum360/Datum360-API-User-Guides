@@ -1,7 +1,7 @@
 # POST /eic/list
 
 ## Description
-Allows EICs to be created or updated if a handle is provided.
+Allows an EIC to be created or updated.
 
 ## Required Capabilities
 * CanUseAPI
@@ -18,8 +18,8 @@ To create: A JSON object with an `attrs` array, with objects for each EIC attrib
 To update: A JSON object with a `hdl` property, containing the handle of the eic to update. As well as the `attrs` array, with an object for each attribute on the EIC to update.
 
 ## Example Request
-To Create:
-`
+To create:
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
@@ -39,10 +39,10 @@ curl --location 'https://{{systemName}}.pim360.io/api/eic/list' \
     }
   ]
 }'
-`
+```
 
 To update:
-`
+```
 {
   "hdl": "gZbXNTq7Tiqf0Oze2VId1w",
   "attrs": [
@@ -56,10 +56,10 @@ To update:
     }
   ]
 }
-`
+```
 
 ## Response Body
-Returns the handle of the EIC that has been created or updated
+Returns the handle of the EIC that has been created or updated.
 
 ## Example Response
 ```JSON
@@ -69,15 +69,12 @@ Returns the handle of the EIC that has been created or updated
 ```
 
 ## Response Status Codes
-**200** Create/Update has been successfully executed
-
-**400** Bad request.
-    "You must provide a CLASS attribute and value" When updating an EIC, you must provide the class of the EIC to update as well as any other attributes that are being changed
-
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Create/update has been successfully executed.|
+|**400** |Bad request. "You must provide a CLASS attribute and value" - When updating an EIC, you must provide the class of the EIC to update as well as any other attributes that are being changed.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

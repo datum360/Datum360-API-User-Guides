@@ -15,7 +15,7 @@ Given a tag ID and facility, find all files that contain the provided tag.
 
 * **tagId** (required) (path) The name of the tag to get files for
 
-* **results** (query string) Optionally get a summary of results by providing "summary" or full details by providing "full"
+* **results** (query) Optionally get a summary of results by providing "summary" or full details by providing "full"
 
 
 ## Example Request

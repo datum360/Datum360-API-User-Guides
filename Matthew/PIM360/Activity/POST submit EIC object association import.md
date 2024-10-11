@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/eic_related_obj_assoc
 
 ## Description
-Submits an EIC related object association import activity
+Submits an EIC related object association import activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,8 +12,8 @@ Submits an EIC related object association import activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) The file to upload. This should be a file stream
-* **eicHdl** (required) (form data) The handle of the file to load into
+* **upfile** (required) (form data) The file to upload. This should be a file stream.
+* **eicHdl** (required) (form data) The handle of the file to load into.
 * **objectType** (required) (form data) The type of object to upload. Must be one of:
     * TAGGED_ITEM
     * DOCUMENT
@@ -31,7 +31,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/eic_r
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted EIC object association import activity
+A JSON object containing the details of the submitted EIC object association import activity.
 
 ## Example Response
 ```JSON
@@ -46,8 +46,8 @@ A JSON object containing the details of the submitted EIC object association imp
             "user_name": "Test Runner",
             "user_job": "Automated Tester",
             "user_handle": "HwiX1yRxSVqzzGpHRg_q5w",
-            "auth_address": "https://dap-demo.acl360.io/",
-            "project_id": "dap-demo-pim360",
+            "auth_address": "https://{{systemName}}.acl360.io/",
+            "project_id": "{{systemName}}-pim360",
             "object_type": "TAGGED_ITEM",
             "eic_handle": "UBzA9lXTQzmWtC2mketjdA",
             "worksheets": 1,
@@ -60,9 +60,11 @@ A JSON object containing the details of the submitted EIC object association imp
 ```
 
 ## Response Status Codes
-**200** Activity has been successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

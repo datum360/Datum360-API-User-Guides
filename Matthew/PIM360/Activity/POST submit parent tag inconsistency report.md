@@ -1,7 +1,7 @@
 # POST /etl_queue/activities/parent_tag_inconsistency_report.md
 
 ## Description
-Submit a Parent Tag Inconsistency Report activity
+Submits a parent tag inconsistency report activity.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,11 +11,11 @@ Submit a Parent Tag Inconsistency Report activity
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **export_mode** (required) (form data) The format of the file that will be genereated. Must be one of:
+* **export_mode** (required) (form data) The format of the file that will be generated. Must be one of:
     * xlsx
     * delimited
-* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma
-* **datasetReference** (form data) optional datasetReference to allow the activity to be resubmitted at a later time
+* **delimiter** (form data) If the "delimited" format is selected, this is the character to use as the delimiter. Defaults to comma.
+* **datasetReference** (form data) Optional datasetReference to allow the activity to be resubmitted at a later time.
 
 ## Example Request
 ```
@@ -25,7 +25,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/paren
 ```
 
 ## Response Body
-A JSON object containing the details of the submitted Parent Tag Inconsistency Report activity
+A JSON object containing the details of the submitted parent tag inconsistency report activity.
 
 ## Example Response
 ```JSON
@@ -46,9 +46,11 @@ A JSON object containing the details of the submitted Parent Tag Inconsistency R
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Activity has been successfully submitted.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

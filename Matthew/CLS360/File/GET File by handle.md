@@ -1,7 +1,7 @@
 # GET /files/{fileHdl}
 
 ## Description
-Download a file by handle
+Downloads a file by handle.
 
 ## Required Capabilities
 * CanUseAPI

@@ -1,7 +1,7 @@
 # POST /queries
 
 ## Description
-Create a query used for retrieving data from Liveview. This does not execute the query but simply saves it to be executed repeadetly at another time.
+Create a query used for retrieving data from Liveview. This does not execute the query but simply saves it to be executed again at another time.
 
 ## Required Capabilities
 * CanUseAPI
@@ -21,15 +21,16 @@ Create a query used for retrieving data from Liveview. This does not execute the
     * EQUIPMENT_ITEM
     * EQUIPMENT_MODEL
 
-* **eic**: The handle of the EIC to retrieve data from, if missing or blank then active data will be used.
+* **eic**: The handle of the EIC, if missing or blank then active data will be used.
 
-* **filter**: JSON object defining the filter to use when querying data. Filter Structure:
+* **filter**: JSON object defining the filter to use when querying data. 
+    Filter structure:
     * **logical**: What logical operator to apply when specifying multiple filter items. Must be one of:
         * AND
         * OR
     
     * **items**: Array of objects, where each object is a filter to apply to the query. Object structure is:
-        * **handle**: Handle of the attribute to filter on
+        * **handle**: Handle of the attribute to filter on.
         * **operator**: Operator to apply as part of the filter, must be one of:
             * **$regex-l**: attribute **contains** value
             
@@ -58,12 +59,12 @@ Create a query used for retrieving data from Liveview. This does not execute the
             * **$regex-ne**: value does **not end with**
 
             * **$regex**: value **matches regex**
-        * **caseSensitive**: boolean value defining whether the search should be case sensitive or not
+        * **caseSensitive**: Boolean value defining whether the search should be case sensitive or not.
 
-        * **uom**: If a measure attribute is being queried, the value uom can be specified here. Can also be $any or $isempty
+        * **uom**: If a measure attribute is being queried, the value uom can be specified here. Can also be $any or $isempty.
 
 
-* **fields**: Array of strings containg the handles of the attributes to return
+* **fields**: Array of strings containing the handles of the attributes to return.
 
 
 ## Example Request
@@ -87,8 +88,10 @@ JSON object with the details of the created query
 ```
 
 ## Response Status Codes
-**201** Query has been created
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**201** |Query has been created.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

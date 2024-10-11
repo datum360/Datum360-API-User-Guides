@@ -1,7 +1,7 @@
 # POST /file
 
 ## Description
-Upload a file to PIM360 to use in an activity later
+Upload a file, returning handle of file, eg. for submitting import activities.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Upload a file to PIM360 to use in an activity later
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **upfile** (required) (form data) Stream of the file to upload
+* **upfile** (required) (form data) Stream of the file to upload.
 
 
 ## Example Request
@@ -22,7 +22,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/file' \
 ```
 
 ## Response Body
-Details of the uploaded file including the handle of the file in PIM360
+Details of the uploaded file including the handle of the file in PIM360.
 
 ## Example Response
 ```JSON
@@ -45,9 +45,10 @@ Details of the uploaded file including the handle of the file in PIM360
 ```
 
 ## Response Status Codes
-**200** File has been successfully uploaded
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |File has been successfully uploaded.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

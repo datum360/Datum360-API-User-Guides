@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}/classes/{classHdl}
 
 ## Description
-Retrieves the class specified by the class handle from the Class Library/Domain specified.
+Retrieves the class specified by the class handle from the class library/domain specified.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Retrieves the class specified by the class handle from the Class Library/Domain 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Library/Domain to use.
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
 * **classHdl** (required) (path) The handle of the class to get.
 
@@ -24,7 +24,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-JSON object containing the full class details
+JSON object containing the full class details.
 
 ## Example Response
 ``` JSON

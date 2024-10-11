@@ -14,15 +14,15 @@ List all deliverables in DDM360
 ## Parameters
 The below parameters can be used to filter the deliverables returned
 
-* **eicNumber** (query string) The EIC to get deliverables from
+* **eicNumber** (query) The EIC to get deliverables from
 
-* **docId** (query string) The PIM360 Document ID to match to
+* **docId** (query) The PIM360 Document ID to match to
 
-* **facId** (query string) Get deliverables from this facility
+* **facId** (query) Get deliverables from this facility
 
-* **pageSize** (query string) The maximum number of deliverables to return. Default and maximum of 200
+* **pageSize** (query) The maximum number of deliverables to return. Default and maximum of 200
 
-* **page** (query string) Skip entries in multiples of page size to return the next set of deliverables
+* **page** (query) Skip entries in multiples of page size to return the next set of deliverables
 
 
 ## Example Request

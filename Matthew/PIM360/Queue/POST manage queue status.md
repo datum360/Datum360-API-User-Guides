@@ -1,7 +1,7 @@
 # POST /etl_queue
 
 ## Description
-Pause or resume the activity queue
+Pause or resume the activity queue.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,7 +11,7 @@ Pause or resume the activity queue
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **data** (required) (body) Object with the attribute `action`. `action` value should be either `pause` or `resume`. If an invalid or missing value is provided then the queue state won't change.
+* **data** (required) (body) Object with the key `action`. `action` value should be either `pause` or `resume`. If an invalid or missing value is provided then the queue state won't change.
 
 ## Example Request
 ```
@@ -22,7 +22,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue' \
 ```
 
 ## Response Body
-JSON object with the same response as GET `/etl_queue`
+JSON object containing Activity Queue status attributes `locked`, `pausing` and `state`. As well as `queue` which is an array of objects with one object per activity in the queue. JSON object has the same response as GET `/etl_queue`. 
 
 ## Example Response
 ```JSON
@@ -89,8 +89,10 @@ JSON object with the same response as GET `/etl_queue`
 ```
 
 ## Response Status Codes
-**200** Queue status has been successfully returned. Does not indicate if the status has been changed
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Queue status has been successfully returned. Does not indicate if the status has been changed.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 

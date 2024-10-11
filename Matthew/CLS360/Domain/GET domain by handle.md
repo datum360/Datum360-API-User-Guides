@@ -1,7 +1,7 @@
 # GET /domains/{domHdl}
 
 ## Description
-Return a domain object selected by handle
+Return a domain object selected by handle.
 
 ## Required Capabilities
 * CanUseAPI

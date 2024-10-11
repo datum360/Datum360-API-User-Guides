@@ -1,7 +1,7 @@
 # POST /explorer/query
 
 ## Description
-Submit an Attribute Explorer query
+Submits an attribute explorer query.
 
 ## Required Capabilities
 * CanUseAPI
@@ -13,7 +13,7 @@ Submit an Attribute Explorer query
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **taglist** (required) (body) JSON object representing the query to run
+* **taglist** (required) (body) JSON object representing the query to run.
 
 
 ## Example Request
@@ -25,7 +25,7 @@ curl --location 'https://{{systemName}}.pim360.io/api/explorer/query' \
 ```
 
 ## Response Body
-JSON object containing the results of the query. The object has an array `rows` where every object in the array is a row in the query results
+JSON object containing the results of the query. The object has an array `rows` where every object in the array is a row in the query results.
 
 ## Example Response
 ```JSON
@@ -54,10 +54,7 @@ JSON object containing the results of the query. The object has an array `rows` 
             "_cmp": 30.43,
             "_typed_cmp": 30.43,
             "_cnt": "13"
-        },
-        .
-        .
-        .
+        }
     ],
     "total": 95,
     "pos": 0
@@ -65,8 +62,10 @@ JSON object containing the results of the query. The object has an array `rows` 
 ```
 
 ## Response Status Codes
-**200** Query has been successfully submitted and results have been returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**500** Internal Server Error. Potential error in the query provided. Check response body for more details
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Query has been successfully submitted and results have been returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500**| Internal Server Error. Potential error in the query provided. Check response body for more details.|
 
 

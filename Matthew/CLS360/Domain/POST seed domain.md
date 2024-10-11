@@ -1,7 +1,7 @@
 # POST /domains/seed
 
 ## Description
-Create a new Class Library/Domain based on the contents of another Class Library/Domain
+Create a new class library/domain based on the contents of another class library/domain
 
 ## Required Capabilities
 * CanUseAPI

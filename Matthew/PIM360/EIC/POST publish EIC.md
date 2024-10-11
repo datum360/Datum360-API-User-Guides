@@ -1,7 +1,7 @@
 # POST /eic/publish
 
 ## Description
-Publishes the provided EIC
+Publishes the provided EIC.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,16 +12,18 @@ Publishes the provided EIC
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-**query** (required) (body) An object containing the handle of the EIC to publish
+**query** (required) (body) An object containing the handle of the EIC to publish.
 
 
 ## Example Request
+```
 curl --location 'https://{{systemName}}.pim360.io/api/eic/publish' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data '{
     "hdl": "XYSp3hn0TDuJV-NX6MrTBQ"
 }'
+```
 
 ## Response Body
 A JSON object containing details of the publish activity that has been submitted. This shows that the activity has been successfully submitted to process but does not guarantee that the publish itself will be successful. To monitor the status of an activity, use the API `GET /etl_queue/activities/{handle}`.
@@ -49,9 +51,11 @@ A JSON object containing details of the publish activity that has been submitted
 ```
 
 ## Response Status Codes
-**200** EIC has been successfully submitted for publish. This does not guarantee that the publish itself is successful.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |EIC has been successfully submitted for publish. This does not guarantee that the publish has been successful.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 
