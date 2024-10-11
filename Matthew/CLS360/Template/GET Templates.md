@@ -18,7 +18,7 @@ Returns a list of all templates.
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates?version=14' \
 --header 'Authorization: ••••••'
 ```
 

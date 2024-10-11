@@ -20,7 +20,7 @@ Gets the details of the uom specified by the class handle.
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/6ONugQvXQbqoOm0nvxBrcw/uom-group' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/6ONugQvXQbqoOm0nvxBrcw/uom-group?version=14' \
 --header 'Authorization: ••••••'
 ```
 

@@ -24,7 +24,7 @@ Returns the essential attributes that are required for creating an object of the
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates/type/TAGGED_ITEM/EssentialAttributes' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates/type/TAGGED_ITEM/EssentialAttributes?version=14' \
 --header 'Authorization: ••••••'
 ```
 

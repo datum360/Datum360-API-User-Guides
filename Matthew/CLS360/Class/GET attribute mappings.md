@@ -20,12 +20,12 @@ For a given ETL Data Source class, specified by classHdl, get all of the attribu
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/yqvnK8LoRwuYGuc87WuaBg/AttributeMappings' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/yqvnK8LoRwuYGuc87WuaBg/AttributeMappings?version=14' \
 --header 'Authorization: ••••••'
 ```
 
 ## Response Body
-JSON object with an array property "rows" where each entry in the array is an ETL Source Mapping. The key properties within each mapping are `Mapped To Attribute` which describes which attribute in CLS360 this is being mapped to, and `Name` which describes the value that the attribute name will be mapped from.
+JSON object with an array property "rows" where each entry in the array is an Attribute Mapping. The key properties within each mapping are `Mapped To Attribute` which describes which attribute in CLS360 this is being mapped to, and `Name` which describes the value that the attribute name will be mapped from.
 
 ## Example Response
 ```JSON

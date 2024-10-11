@@ -20,7 +20,7 @@ Gets all attributes or a single attribute by name, for the class library/domain 
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/attributes?attributeName=ISO%20currency%20code' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/attributes?attributeName=ISO%20currency%20code&version=14' \
 --header 'Authorization: ••••••'
 ```
 

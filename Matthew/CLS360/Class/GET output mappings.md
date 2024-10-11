@@ -20,7 +20,7 @@ For a given ETL Data Target class get all of the attribute output mappings for t
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/4p8gbt4NQd-JHvITyMG0sA/OutputMappings' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/4p8gbt4NQd-JHvITyMG0sA/OutputMappings?version=14' \
 --header 'Authorization: ••••••'
 ```
 

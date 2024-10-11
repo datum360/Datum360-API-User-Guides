@@ -29,7 +29,7 @@ Gets all classes from the specified class library/domain. An optional filter can
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes?filter=Name%20eq%20cabinet%20and%20%5BObject%20Type%5D%20eq%20Functional' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes?filter=Name%20eq%20cabinet%20and%20%5BObject%20Type%5D%20eq%20Functional&version=14' \
 --header 'Authorization: ••••••' \
 ```
 

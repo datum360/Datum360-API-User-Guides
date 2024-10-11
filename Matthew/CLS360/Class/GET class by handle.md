@@ -19,7 +19,7 @@ Retrieves the class specified by the class handle from the Class Library/Domain 
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/_CU46pvVSd-i3KkyPfVkVg?version=14' \
 --header 'Authorization: ••••••'
 ```
 

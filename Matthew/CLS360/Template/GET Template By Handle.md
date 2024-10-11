@@ -18,7 +18,7 @@ Gets the CL4CL Template by handle.
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates/qHw1SY80Ty-wZegNrrvymw' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/templates/qHw1SY80Ty-wZegNrrvymw?version=14' \
 --header 'Authorization: ••••••'
 ```
 
