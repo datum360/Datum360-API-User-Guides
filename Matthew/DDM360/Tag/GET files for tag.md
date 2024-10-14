@@ -15,8 +15,6 @@ Returns all files that contain the provided tag.
 
 * **tagId** (required) (path) The name of the tag.
 
-* **results** (query) Optionally get a summary of results by providing "summary" or full details by providing "full".
-
 
 ## Example Request
 ```
