@@ -14,7 +14,7 @@ Allows the creation of a new class in the specified class library/domain
 ## Parameters
 * **domHdl** (required) (path) Handle of the class library/domain to create the class in.
 
-* **class** (required) (body) JSON structure of the class to create
+* **class** (required) (body) JSON structure of the class to create.
 
 ## Example Request
 ```
@@ -103,7 +103,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
             }'
 ```
 
-The above example will create a new Functional class in CLS360. Note that this is the bare minimum needed to create a class. **The checksum value provided can and should be reused as this is a valid checksum**
+The above example will create a new Functional (Tagged Item in 4.10 or later) class in CLS360. Note that this is the bare minimum needed to create a class. **The checksum value provided can and should be reused as this is a valid checksum**
 
 ## Response Body
 String containing the handle of the newly created class
@@ -114,9 +114,11 @@ String containing the handle of the newly created class
 ```
 
 ## Response Status Codes
-**201** Class has been successfully created
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error. Detailed error message should be provided in the response body.
+| Status Code | Description |
+| -------- | ------- |
+|**201** |Class has been successfully created.|
+|**401**| Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404**| Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error. Detailed error message should be provided in the response body.|
 
 

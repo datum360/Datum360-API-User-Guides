@@ -38,7 +38,7 @@ Defaults to whatever was specified in the original query.
 
 ## Example Request
 ```
-curl --location 'https://systemName.pim360.io/api/queryresults/XarDE_IgSGmHzqGqMkrwzg' \
+curl --location 'https://systemName.pim360.io/api/queryresults/XarDE_IgSGmHzqGqMkrwzg?eic=lm91x_FdRXeb6crnqo1UXA&type=TAGGED_ITEM&sortCol=F7NxT1JXQ92Kz-qylUi8pw&skip=200&limit=200' \
 --header 'Authorization: ••••••' \
 --header 'Cookie: express.sid=s%3AwiC2Dkb9piaMM1hsg5GX2382k1xUAl-O.XYLZpGotNqwVlm0htPj2wHx3wqNoffb3Q%2Byiccngm3Q'
 ```

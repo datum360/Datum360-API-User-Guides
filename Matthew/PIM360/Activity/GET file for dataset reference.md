@@ -24,8 +24,6 @@ curl --location 'https://{{systemName}}.pim360.io/api/etl_queue/activities/refer
 ## Response Body
 The output file associated with the activity. For example if the activity was an export activity to an Excel file then the contents of the response will be the Excel file.
 
-## Example Response
-
 
 ## Response Status Codes
 | Status Code | Description |

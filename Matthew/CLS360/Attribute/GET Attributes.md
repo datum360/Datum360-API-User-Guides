@@ -1,4 +1,4 @@
-# GET /domains/{domHdl}/attribues
+# GET /domains/{domHdl}/attributes
 
 ## Description
 Gets all attributes or a single attribute by name, for the class library/domain specified. Only the attribute summary is returned i.e Hdl, Name etc. To get further information, pass the attribute handle to the API `GET /domains/{domHdl}/classes/{clsHdl}`
@@ -11,16 +11,16 @@ Gets all attributes or a single attribute by name, for the class library/domain 
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Class Libray/Domain to use
+* **domHdl** (required) (path) The handle of the class library/domain to use
 
 * **attributeName** (query) The name of the attribute to get. Attribute names must be URL encoded.
 
-* **version** (query) The version of the Class Library to get data from
+* **version** (query) The version of the class library to use.
 
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/attributes?attributeName=ISO%20currency%20code' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/attributes?attributeName=ISO%20currency%20code&version=14' \
 --header 'Authorization: ••••••'
 ```
 
@@ -45,9 +45,9 @@ A JSON object containing an array `rows` where each object in the array is an at
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
-
-
+| Status Code | Description |
+| -------- | ------- |
+| 200  | Matching item has been found and successfully returned.    |
+| 401 | Unauthorised, authentication is missing or invalid. Check that the token has not expired.     |
+| 404    | Requested item can't be found. Check that the handle has been provided and is correct.    |
+| 5000    | Internal Server Error.    |

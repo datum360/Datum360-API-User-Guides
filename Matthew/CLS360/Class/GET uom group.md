@@ -11,16 +11,16 @@ Gets the details of the uom specified by the class handle.
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **domHdl** (required) (path) The handle of the Domain/Class Library to get the class from
+* **domHdl** (required) (path) The handle of the class library/domain to use.
 
-* **classHdl** (required) (path) The handle of the class to get. This must be a class of type "UoM Group", if any other handle is used then a 404 error will be returned.
+* **classHdl** (required) (path) The handle of the class to use. This must be a class of type "UoM Group", if any other handle is used then a 404 error will be returned.
 
-* **version** (query) Which version of the Class Library to get the Class from. The latest version will be used by default.
+* **version** (query) Which version of the class library to use. The latest version will be used by default.
 
 
 ## Example Request
 ```
-curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/6ONugQvXQbqoOm0nvxBrcw/uom-group' \
+curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlHsYNw/classes/6ONugQvXQbqoOm0nvxBrcw/uom-group?version=14' \
 --header 'Authorization: ••••••'
 ```
 
@@ -89,10 +89,7 @@ JSON object containing the full UoM class details. The UoMs within the UoM Group
                 {
                     "label": "TAG",
                     "value": "TAG"
-                },
-                .
-                .
-                .
+                }
             ]
         },
         {
@@ -149,10 +146,7 @@ JSON object containing the full UoM class details. The UoMs within the UoM Group
                 "Icon": "ATTR-MEAS",
                 "Status": "STANDARD",
                 "Type": "Measure Attribute"
-            },
-            .
-            .
-            .
+            }
         ]
     },
     "history": {
@@ -208,9 +202,11 @@ JSON object containing the full UoM class details. The UoMs within the UoM Group
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Matching item has been found and successfully returned.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**404** |Requested item can't be found. Check that the handle has been provided and is correct.|
+|**500** |Internal Server Error.|
 
 

@@ -1,7 +1,7 @@
 # POST /domains/{domHdl}/templates
 
 ## Description
-Allows the creation of a new template in CL4CL
+Allows the creation of a new template in CL4CL.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,7 +12,7 @@ Allows the creation of a new template in CL4CL
 
 ## Parameters
 
-* **domHdl** (required) (path) The handle of the Domain/Class Library to create the template in.
+* **domHdl** (required) (path) The handle of the class library/domain to create the template in.
 
 * **template** (required) (body) The JSON object representing the template to create.
 
@@ -104,7 +104,7 @@ curl --location 'https://{{systemName}}.cls360.io/api/domains/MAKZvz1eTQSvaQdvlH
 ```
 
 ## Response Body
-The handle of the newly created CL4CL Template
+The handle of the newly created CL4CL template.
 
 ## Example Response
 ```
@@ -112,8 +112,10 @@ The handle of the newly created CL4CL Template
 ```
 
 ## Response Status Codes
-**200** Template has been successfully created.
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+|**200** |Template has been successfully created.|
+|**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.|
+|**500** |Internal Server Error.|
 
 
