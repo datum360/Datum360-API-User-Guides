@@ -1,7 +1,7 @@
 # POST /documents/{docHdl}/revisions/{revHdl}/versions/{verHdl}/files/{fileHdl}/aliases
 
 ## Description
-Add one or more tags to components on the specified file
+Add one or more tags to components on the specified file.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,19 +12,19 @@ Add one or more tags to components on the specified file
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **docHdl** (required) (path) The handle of the document to use
+* **docHdl** (required) (path) The handle of the document.
 
-* **revHdl** (required) (path) The handle of the revision to use
+* **revHdl** (required) (path) The handle of the revision.
 
-* **verHdl** (required) (path) The handle of the version to use. Defaults to the current version
+* **verHdl** (required) (path) The handle of the version. Defaults to the current version
 
-* **fileHdl** (required) (path) The handle of the file to use
+* **fileHdl** (required) (path) The handle of the file.
 
-* **tagAliasInfo** (required) (body) JSON object describing which tags to the file and which component they are associated with. Multiple tags can be associated at once by adding mutiple entries in the `tagAliases` array.
+* **tagAliasInfo** (required) (body) JSON object describing which tags to the file and which component they are associated with. Multiple tags can be associated at once by adding multiple entries in the `tagAliases` array.
     * `locationType` set to `OBJECTID`
     * `tagAliases` is an array of tags to add to the file. For each tag, add an object with:
-        * `components` an array of components to associate the tag to
-        * `tags` an array of tags to add. Must include tag ID and facility
+        * `components` an array of components to associate the tag to.
+        * `tags` an array of tags to add. Must include tag ID and facility.
 
 ## Example Request
 ```
@@ -55,7 +55,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/documents/ANZ1GrhpTUixLsuB
 ```
 
 ## Response Body
-JSON object confirming the details of the newly added tag alias
+JSON object confirming the details of the newly added tag alias.
 
 ## Example Response
 ```JSON
@@ -96,9 +96,11 @@ JSON object confirming the details of the newly added tag alias
 ```
 
 ## Response Status Codes
-**201** Tag alias has been sucessfully created
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error. Check that all required items have been provided in the request body.
+| Status Code | Description |
+| -------- | ------- |
+**201** |Tag alias has been successfully created.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handles have been provided and are correct.
+**500** |Internal Server Error. Check that all required items have been provided in the request body.
 
 

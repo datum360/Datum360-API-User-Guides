@@ -1,7 +1,7 @@
 # PATCH /deliverables/{delHdl}/files/{fileHdl}/forgeupload
 
 ## Description
-Submits a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer
+Submits a file for processing to BIM360/ACC to make it viewable in the DDM360 viewer.
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,9 +11,9 @@ Submits a file for processing to BIM360/ACC to make it viewable in the DDM360 vi
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **delHdl** (required) (path) Handle of the deliverable to use
+* **delHdl** (required) (path) Handle of the deliverable.
 
-* **fileHdl** (required) (path) Handle of the file to submit
+* **fileHdl** (required) (path) Handle of the file.
 
 
 ## Example Request
@@ -81,9 +81,11 @@ JSON object with the response from the upload.
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully submitted
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully submitted.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handles have been provided and are correct.
+**500** |Internal Server Error.
 
 

@@ -1,7 +1,7 @@
 # GET /deliverables/{delHdl}/files/{fileHdl}/forgeupload
 
 ## Description
-Get the progress of a file that has been submitted to BIM360/ACC
+Gets the progress of a file that has been submitted to BIM360/ACC
 
 ## Required Capabilities
 * CanUseAPI
@@ -11,9 +11,9 @@ Get the progress of a file that has been submitted to BIM360/ACC
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **delHdl** (required) (path) Handle of the deliverable to use
+* **delHdl** (required) (path) Handle of the deliverable to use.
 
-* **fileHdl** (required) (path) Handle of the file to get progress for
+* **fileHdl** (required) (path) Handle of the file.
 
 ## Example Request
 ```
@@ -22,7 +22,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/deliverables/XaVlSbewT7qLr
 ```
 
 ## Response Body
-JSON object describing the file in BIM360/ACC. Progress can be found on the `progress` attriubte. Contents may differ depending on if BIM360 or ACC is used.
+JSON object describing the file in BIM360/ACC. Progress can be found on the `progress` attribute. Contents may differ depending on if BIM360 or ACC is used.
 
 ## Example Response
 ```JSON
@@ -180,9 +180,11 @@ JSON object describing the file in BIM360/ACC. Progress can be found on the `pro
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully returned.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handle has been provided and is correct.
+**500** |Internal Server Error.
 
 

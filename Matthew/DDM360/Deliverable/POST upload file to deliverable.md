@@ -14,7 +14,7 @@ Upload one or more files to a deliverable in DDM360. This will automatically cre
 ## Parameters
 * **delHdl** (required) (path) Handle of the deliverable to upload to.
 
-* **file** (required) (formData) The file to upload
+* **file** (required) (formData) The file to upload.
 
 
 ## Example Request
@@ -25,7 +25,7 @@ curl --location 'https://{{systemName}}.ddm360.io/api/deliverables/XaVlSbewT7qLr
 ```
 
 ## Response Body
-JSON object describing the new version of the deliverable that has been created
+JSON object describing the new version of the deliverable that has been created.
 
 ## Example Response
 ```JSON
@@ -47,10 +47,12 @@ JSON object describing the new version of the deliverable that has been created
 ```
 
 ## Response Status Codes
-**200** File has been sucessfully uploaded to the deliverable
-**400** Bad request. Check that file has been added to the request
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |File has been successfully uploaded to the deliverable.
+**400** |Bad request. Check that file has been added to the request.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handle has been provided and is correct.
+**500** |Internal Server Error.
 
 

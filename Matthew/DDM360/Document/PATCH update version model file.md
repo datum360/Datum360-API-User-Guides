@@ -1,7 +1,7 @@
 # PATCH /documents/{docHdl}/revisions/{revHdl}/version/{verHdl}
 
 ## Description
-Allows the specified document version to be updated so that it can point to a different file that has already been uploaded to DDM360.
+Updates the specified document version so that it can point to a different file that has already been uploaded to DDM360.
 
 ## Required Capabilities
 * CanUseAPI
@@ -12,11 +12,11 @@ Allows the specified document version to be updated so that it can point to a di
 **Authorization** OAuth2 bearer token, obtained from the Authorisation endpoint (2-legged or 3-legged flow)
 
 ## Parameters
-* **docHdl** (required) (path) The handle of the document to update
+* **docHdl** (required) (path) The handle of the document.
 
-* **revHdl** (required) (path) The handle of the revision to update
+* **revHdl** (required) (path) The handle of the revision.
 
-* **verHdl** (required) (path) The handle of the version to update
+* **verHdl** (required) (path) The handle of the version.
 
 * **version** (required) (body) JSON object containing a property `modelFileHdl` and the handle of the file to use.
 
@@ -31,7 +31,7 @@ curl --location --request PATCH 'https://{{systemName}}.ddm360.io/api/documents/
 ```
 
 ## Response Body
-JSON object containing the newly updated version object
+JSON object containing the newly updated version object.
 
 ## Example Response
 ```JSON
@@ -76,9 +76,11 @@ JSON object containing the newly updated version object
 ```
 
 ## Response Status Codes
-**200** Matching item has been found and successfully returned
-**401** Unauthorised, authentication is missing or invalid. Check that the token has not expired
-**404** Requested item can't be found. Check that the handle has been provided and is correct.
-**500** Internal Server Error
+| Status Code | Description |
+| -------- | ------- |
+**200** |Matching item has been found and successfully updated.
+**401** |Unauthorised, authentication is missing or invalid. Check that the token has not expired.
+**404** |Requested item can't be found. Check that the handle has been provided and is correct.
+**500** |Internal Server Error.
 
 
