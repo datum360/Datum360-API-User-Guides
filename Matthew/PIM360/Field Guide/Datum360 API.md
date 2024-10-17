@@ -10,7 +10,7 @@ To keep the connected data platform secure, any API calls with a valid authentic
 
 * All API requests require an authentication token to be provided as part of the `Authentication` header. This token can be obtained from the `/oauth2/token` endpoint in ACL360. Tokens last for 30 minutes before expiring, therefore it is good practice to reuse the same token between requests. If you believe that your process will run for longer than 30 minutes, then it can be good to check for `403` response codes on requests you send. When a `403` is returned, this could indicate that the token you're using has expired and a new one should be obtained before retrying the call.
 
-* Rate limiting is not currently implemented on the API therefore it is important not to abuse the APIs by continuously polling for data. For example when checking to see if an activity has finished processing, checks should be done every 3-5 seconds rather than continuously.
+* When checking to see if an activity has completed, it is good practice to implement a delay of at least a few seconds between requests to the activity timeline rather than continuosly polling.
 
 ## Finding required information
 
