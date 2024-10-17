@@ -13,7 +13,7 @@ Create a new deliverable in DDM360.
 ## Parameters
 * **deliverable** (required) (body) JSON object describing the deliverable to create. Required parameters are:
     * **eicNumber**: The number of the EIC, in PIM360, that the deliverable exists in.
-    * **pimDocId**: The name of the deliverable and the name of the document in PIM360.
+    * **pimDocId**: The name of the deliverable (the name of the corresponding document in PIM360).
     * **facId**: The name of the facility that the deliverable/document exists in.
     * **revisionName**: Name of the revision for this deliverable.
     * **personResponsible**: Person responsible for this deliverable.
