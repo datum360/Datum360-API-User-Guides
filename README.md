@@ -1,6 +1,6 @@
-# Datum360 API Field Guide
+# Datum360 API Field Guide 
 
-![Datum360Logo](./Datum360Logo.png)
+![Datum360Logo](./Datum360Logo.png =100x)
 
 ## Overview
 Each one of the Datum360 services (CLS360, PIM360, DDM360) have their own set of APIs available allowing read/write capabilities to the connected data platform. The APIs allow code to be written to integrate with other external services, bringing in data to populate PIM360 and exporting data to update external data sources.
