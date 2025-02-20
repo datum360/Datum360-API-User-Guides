@@ -1,45 +1,28 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Datum360 API Field Guide 
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+<img src="./Datum360Logo.png" alt="Datum360Logo" height="50">
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Overview
+Each one of the Datum360 services (CLS360, PIM360, DDM360) have their own set of APIs available allowing read/write capabilities to the connected data platform. The APIs allow code to be written to integrate with other external services, bringing in data to populate PIM360 and exporting data to update external data sources.
 
----
+## Authorisation
+To keep the connected data platform secure, any API calls with a valid authentication token will use the same capabilities as the logged in user. So if the user cannot do something in the UI it wil not be possible via the API. Therefore, it is recommended to test your proposed workflow through the UI using the same account that the API will use to confirm all required capabilities are present.
 
-## Edit a file
+## Best Practices
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+* All API requests require an authentication token to be provided as part of the `Authentication` header. This token can be obtained from the `/oauth2/token` endpoint in ACL360. Tokens last for 30 minutes before expiring, therefore it is good practice to reuse the same token between requests. If you believe that your process will run for longer than 30 minutes, then it can be good to check for `403` response codes on requests you send. When a `403` is returned, this could indicate that the token you're using has expired and a new one should be obtained before retrying the call.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+* When checking to see if an activity has completed, it is good practice to implement a delay of at least a few seconds between requests to the activity timeline rather than continuosly polling.
 
----
+## Finding required information
 
-## Create a file
+A lot of API calls require handles to be provided and it can be difficult to know where to locate them. Below is a list of common handles that are required and where to find them:
 
-Next, you’ll add a new file to this repository.
+* `eicHdl` This can easily be found by navigating to the EIC Explorer page in PIM360, then double clicking on the EIC you want the handle for. This should open up the EIC details page in its own tab, the handle can then be found in the address bar after `/EIC/` like so: https://{{systemName}}.pim360.io/object/EIC/XYSp3hn0TDuJV-NX6MrTBQ where `XYSp3hn0TDuJV-NX6MrTBQ` is the EIC handle. If you need to programmatically iterate over a number of EICs, then the best way to do that would be to call the `/eic/list` API.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+* `liveviewHdl`/`pivotHdl` Handles of saved views such as liveview or pivot views can be found in the same way. Open the saved view in PIM360, then the handle should be in the address bar e.g https://{{systemName}}.pim360.io/liveview?viewhash=62utKNoWTlSkrFg14wYo6w where `62utKNoWTlSkrFg14wYo6w` is the view handle.
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+* `domainHdl` Most CLS360 APIs and some PIM360 APIs require the domain handle. The domain handle refers to the handle of a class library. This can be found using either PIM360 or CLS360 APIs. To find the handle of the class library currently being used by PIM360, call the `/snapshot` API, the `hdl` attribute in the response refers to the class library/domain handle. To get the handle of a class library/domain that is not currently synced to PIM360, call the `/domains` API in CLS360.
+ 
+* `etlSourceHdl`/`etlTargetHdl` When running export and import activities, you will need the ETL Source for imports and the ETL Target for exports. This information is only held in CLS360 and can be retrieved either from the UI or API. To get the handle from the UI, navigate to CLS360, expand the `ETL` tab, single click on `ETL Sources` or `ETL Targets`, this should display a list of ETL Sources/Targets on the right hand side, double click on the required ETL Source/Target to open the details in a new tab. The handle should be in the address bar e.g  https://{{systemName}}.cls360.io/detail/classes/9hUV830ORX--xU99hZD-_g?ts=1724376997885 where `9hUV830ORX--xU99hZD-_g` is the handle. 
+To get the handle using the CLS360 API, call the `/domains/{domainHdl}/classes` API and use the filter `Name eq [{ETL Name}] and [Object Type] eq [Data Source]` to get an ETL Source, for ETL Targets change `Data Source` to `Data Target`.
